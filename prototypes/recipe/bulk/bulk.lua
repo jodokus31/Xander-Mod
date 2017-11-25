@@ -916,7 +916,7 @@ data:extend(
 	category = "chemical-plant",
 	energy_required = 50,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "chlorobenzene", amount = 20}, {type = "fluid", name = "dimethyl-carbonate", amount = 10}},--{type = "fluid", name = "ammonia", amount = 10}, 
+	ingredients = {{type = "fluid", name = "chlorobenzene", amount = 20}, {type = "fluid", name = "ammonia", amount = 10}, {type = "fluid", name = "dimethyl-carbonate", amount = 10}},
 	result = "synthetic-drugs"
 },
 
