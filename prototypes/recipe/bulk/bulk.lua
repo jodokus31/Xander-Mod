@@ -5,14 +5,14 @@
 
 --Base "steel-plate"
 data.raw.recipe["steel-plate"].energy_required = 8
-data.raw.recipe["steel-plate"].normal = 
+data.raw.recipe["steel-plate"].normal =
 {
 	enabled = false,
 	energy_required = 8,
 	ingredients = {{"iron-plate", 4}},
 	result = "steel-plate"
 }
-data.raw.recipe["steel-plate"].expensive = 
+data.raw.recipe["steel-plate"].expensive =
 {
 	enabled = false,
 	energy_required = 16,
