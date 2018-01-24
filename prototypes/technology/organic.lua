@@ -34,10 +34,6 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "phenol-a"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "water-clarifying-a"
 		}
 	},
 	prerequisites = {"coke-a", "reactor_0"},
@@ -518,6 +514,10 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "light-propylene"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "propylene-ethylene"
 		},
 		{
 			type = "unlock-recipe",

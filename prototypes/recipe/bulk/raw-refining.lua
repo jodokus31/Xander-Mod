@@ -49,6 +49,7 @@ data:extend(
 	type = "recipe",
     name = "hydrogen-fluoride",
 	icon = "__xander-mod__/graphics/recipe/refining/hydrogen-fluoride.png",
+	icon_size = 32,
 	category = "chemistry",
 	crafting_machine_tint =
 	{
@@ -67,6 +68,7 @@ data:extend(
 	type = "recipe",
     name = "phosphoric-acid",
 	icon = "__xander-mod__/graphics/recipe/refining/phosphoric-acid.png",
+	icon_size = 32,
 	category = "chemistry",
 	crafting_machine_tint =
 	{
@@ -85,6 +87,7 @@ data:extend(
 	type = "recipe",
     name = "phosphorus-smelting",
 	icon = "__xander-mod__/graphics/recipe/refining/phosphorus-smelting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 20,
 	enabled = false,
@@ -98,17 +101,21 @@ data:extend(
 {
 	type = "recipe",
     name = "gibbsite-calcining",
+	icon = "__xander-mod__/graphics/recipe/refining/gibbsite-calcining.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 4,
 	enabled = false,
 	ingredients = {{"aluminum-hydroxide", 2}},
-	result = "aluminum-oxide"
+	results = {{"aluminum-oxide", 1}, {type = "fluid", name = "gray-water", amount = 30}},
+	subgroup = "raw-material"
 },
 --Hall-Heroult Process
 {
 	type = "recipe",
     name = "hall-heroult",
 	icon = "__xander-mod__/graphics/recipe/refining/hall-heroult.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 800,
 	enabled = false,
@@ -121,11 +128,12 @@ data:extend(
 	type = "recipe",
     name = "acheson-silicon",
 	icon = "__xander-mod__/graphics/recipe/refining/acheson-silicon.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 100,
 	enabled = false,
-	ingredients = {{"sand", 10}, {"graphite-block", 1}, {"coke", 6}},
-	results = {{"metallurgical-plate", 10}, {type = "fluid", name = "flue-gas", amount = 100}},
+	ingredients = {{"sand", 20}, {"graphite-block", 1}, {"coke", 16}},
+	results = {{"metallurgical-plate", 20}, {type = "fluid", name = "flue-gas", amount = 200}},
 	subgroup = "raw-material"
 },
 --Acheson Process Silicon Carbide
@@ -133,11 +141,12 @@ data:extend(
 	type = "recipe",
     name = "acheson-carbide",
 	icon = "__xander-mod__/graphics/recipe/refining/acheson-carbide.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 100,
 	enabled = false,
-	ingredients = {{"sand", 10}, {"graphite-block", 1}, {"coke", 16}},
-	results = {{"silicon-carbide", 10}, {type = "fluid", name = "flue-gas", amount = 100}},
+	ingredients = {{"sand", 20}, {"graphite-block", 1}, {"coke", 36}},
+	results = {{"silicon-carbide", 20}, {type = "fluid", name = "flue-gas", amount = 200}},
 	subgroup = "raw-material"
 },
 --Acheson Process Graphite
@@ -145,11 +154,12 @@ data:extend(
 	type = "recipe",
     name = "acheson-graphite",
 	icon = "__xander-mod__/graphics/recipe/refining/acheson-graphite.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 200,
 	enabled = false,
-	ingredients = {{"silicon-carbide", 10}, {"graphite-block", 1}},
-	results = {{"graphite-powder", 14}, {"metallurgical-plate", 10}},
+	ingredients = {{"silicon-carbide", 20}, {"graphite-block", 1}},
+	results = {{"graphite-powder", 24}, {"metallurgical-plate", 20}},
 	subgroup = "raw-material"
 },
 --
@@ -169,10 +179,10 @@ data:extend(
 {
 	type = "recipe",
     name = "smelting-graphite",
-	category = "smelting",
-	energy_required = 8,
+	category = "basic-sluice",
+	energy_required = 2,
 	enabled = false,
-	ingredients = {{"coke", 2}},
+	ingredients = {{"granitic-ore", 1}, {type = "fluid", name = "water", amount = 10}},
 	result = "graphite-powder"
 },
 --Base "coal-liquefaction" placeholder
@@ -194,6 +204,7 @@ data:extend(
 	type = "recipe",
     name = "chalcocite-roasting",
 	icon = "__xander-mod__/graphics/recipe/refining/chalcocite-roasting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 20,
 	enabled = false,
@@ -206,6 +217,7 @@ data:extend(
 	type = "recipe",
     name = "copper-smelting",
 	icon = "__xander-mod__/graphics/recipe/refining/copper-smelting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 100,
 	enabled = false,
@@ -218,12 +230,13 @@ data:extend(
 	type = "recipe",
     name = "copper-cobalt",
 	icon = "__xander-mod__/graphics/recipe/refining/copper-cobalt.png",
+	icon_size = 32,
 	category = "ore-plant",
 	energy_required = 400,
 	enabled = false,
 	ingredients = {{"cuprous-oxide", 10}, {type = "fluid", name = "sulfuric-acid", amount = 20}, {type = "fluid", name = "ammonia", amount = 20}, 
-		{"calcium-oxide", 10}},-- {type = "fluid", name = "oxygen", amount = 50}},
-	results = {{"copper-plate", 20}, {"cobalt-oxide", 2}, {type = "fluid", name = "waste-water", amount = 40}},
+		{"calcium-oxide", 10}, {type = "fluid", name = "oxygen", amount = 50}},
+	results = {{"copper-plate", 20}, {"cobalt-oxide", 2}, {type = "fluid", name = "waste-slurry", amount = 20}},
 	subgroup = "raw-material"
 },
 --Cobalt Electrowinning
@@ -231,6 +244,7 @@ data:extend(
 	type = "recipe",
     name = "cobalt-electrowinning",
 	icon = "__xander-mod__/graphics/recipe/refining/cobalt-electrowinning.png",
+	icon_size = 32,
 	category = "electrolysis",
 	crafting_machine_tint =
 	{
@@ -240,8 +254,8 @@ data:extend(
 	},
 	energy_required = 100,
 	enabled = false,
-	ingredients = {{"cobalt-oxide", 10}, {type = "fluid", name = "sulfuric-acid", amount = 10}},
-	results = {{"cobalt-plate", 10}, {type = "fluid", name = "waste-water", amount = 20}},
+	ingredients = {{"cobalt-oxide", 10}, {type = "fluid", name = "sulfuric-acid", amount = 10}, {type = "fluid", name = "water", amount = 50}},
+	results = {{"cobalt-plate", 10}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-material"
 },
 --
@@ -264,6 +278,7 @@ data:extend(
 	type = "recipe",
     name = "nickel-smelting",
 	icon = "__xander-mod__/graphics/recipe/refining/nickel-smelting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 50,
 	enabled = false,
@@ -276,6 +291,7 @@ data:extend(
 	type = "recipe",
     name = "nickel-platinum",
 	icon = "__xander-mod__/graphics/recipe/refining/nickel-platinum.png",
+	icon_size = 32,
 	category = "electrolysis",
 	crafting_machine_tint =
 	{
@@ -285,8 +301,8 @@ data:extend(
 	},
 	energy_required = 400,
 	enabled = false,
-	ingredients = {{"garnierite", 20}, {type = "fluid", name = "sulfuric-acid", amount = 40}},
-	results = {{"nickel-plate", 20}, {"platinum-sponge", 1}, {type = "fluid", name = "waste-water", amount = 80}},
+	ingredients = {{"garnierite", 20}, {type = "fluid", name = "sulfuric-acid", amount = 40}, {type = "fluid", name = "water", amount = 100}},
+	results = {{"nickel-plate", 20}, {"platinum-sponge", 1}, {type = "fluid", name = "waste-water", amount = 100}},
 	subgroup = "raw-material"
 },
 --Platinum Smelting
@@ -294,6 +310,7 @@ data:extend(
 	type = "recipe",
     name = "platinum-smelting",
 	icon = "__xander-mod__/graphics/recipe/refining/platinum-smelting.png",
+	icon_size = 32,
 	category = "forge",
 	energy_required = 100,
 	enabled = false,
@@ -317,6 +334,7 @@ data:extend(
 	type = "recipe",
     name = "tin-smelting",
 	icon = "__xander-mod__/graphics/recipe/refining/tin-smelting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 100,
 	enabled = false,
@@ -328,11 +346,14 @@ data:extend(
 {
 	type = "recipe",
     name = "tungsten-reduction",
+	icon = "__xander-mod__/graphics/recipe/refining/tungsten-reduction.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"tungsten-oxide", 10}, {type = "fluid", name = "hydrogen", amount = 30}},
-	result = "tungsten-powder"
+	ingredients = {{"tungsten-oxide", 1}, {type = "fluid", name = "hydrogen", amount = 30}},
+	results = {{"tungsten-powder", 1}, {type = "fluid", name = "gray-water", amount = 30}},
+	subgroup = "raw-material"
 },
 --Tungsten Sintering
 {
@@ -349,6 +370,7 @@ data:extend(
 	type = "recipe",
     name = "miller-process",
 	icon = "__xander-mod__/graphics/recipe/refining/miller-process.png",
+	icon_size = 32,
 	category = "forge",
 	energy_required = 50,
 	enabled = false,
@@ -361,12 +383,13 @@ data:extend(
 	type = "recipe",
     name = "scheelite-dissolution",
 	icon = "__xander-mod__/graphics/recipe/refining/scheelite-dissolution.png",
-	category = "forge",
+	icon_size = 32,
+	category = "sluice",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"scheelite", 1}, {"sodium-hydroxide", 2}, {type = "fluid", name = "hydrogen-chloride", amount = 20}}, 
-		--{type = "fluid", name = "sulfuric-acid", amount = 10}},
-	results = {{"tungsten-oxide", 1}, {"calcium-sulfate", 1}, {"salt", 2}, {type = "fluid", name = "waste-water", amount = 10}},
+	ingredients = {{"scheelite", 1}, {"sodium-hydroxide", 2}, {type = "fluid", name = "hydrogen-chloride", amount = 20}, 
+		{type = "fluid", name = "sulfuric-acid", amount = 10}},
+	results = {{"tungsten-oxide", 1}, {"calcium-sulfate", 1}, {"salt", 2}, {type = "fluid", name = "waste-slurry", amount = 10}},
 	subgroup = "raw-material"
 },
 --Cassiterite Slagging with Gold
@@ -374,6 +397,7 @@ data:extend(
 	type = "recipe",
     name = "cassiterite-gold",
 	icon = "__xander-mod__/graphics/recipe/refining/cassiterite-gold.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 200,
 	enabled = false,
@@ -388,6 +412,7 @@ data:extend(
 	type = "recipe",
     name = "chromite-slagging",
 	icon = "__xander-mod__/graphics/recipe/refining/chromite-slagging.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 80,
 	enabled = false,
@@ -395,11 +420,12 @@ data:extend(
 	results = {{"sodium-chromate", 8}, {"hematite", 2}, {type = "fluid", name = "flue-gas", amount = 80}},
 	subgroup = "raw-material"
 },
---Chromate Leaching
+--Chromate Leaching and Reduction to Chromium(III) Oxide
 {
 	type = "recipe",
     name = "chromate-leaching",
 	icon = "__xander-mod__/graphics/recipe/refining/chromate-leaching.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
@@ -412,6 +438,7 @@ data:extend(
 	type = "recipe",
     name = "chromium-reduction",
 	icon = "__xander-mod__/graphics/recipe/refining/chromium-reduction.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
@@ -424,6 +451,7 @@ data:extend(
 	type = "recipe",
     name = "rutile-chlorination",
 	icon = "__xander-mod__/graphics/recipe/refining/rutile-chlorination.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -436,10 +464,11 @@ data:extend(
 	type = "recipe",
     name = "titanium-oxide",
 	icon = "__xander-mod__/graphics/recipe/refining/titanium-oxide.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "titanium-tetrachloride", amount = 10}},-- {type = "fluid", name = "water", amount = 40}},
+	ingredients = {{type = "fluid", name = "titanium-tetrachloride", amount = 10}, {type = "fluid", name = "water", amount = 40}},
 	results = {{"titanium-oxide", 1}, {type = "fluid", name = "hydrogen-chloride", amount = 40}},
 	subgroup = "raw-material"
 },
@@ -448,6 +477,7 @@ data:extend(
 	type = "recipe",
     name = "kroll-titanium",
 	icon = "__xander-mod__/graphics/recipe/refining/kroll-titanium.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -460,6 +490,7 @@ data:extend(
 	type = "recipe",
     name = "titanium-remelting",
 	icon = "__xander-mod__/graphics/recipe/refining/titanium-remelting.png",
+	icon_size = 32,
 	category = "forge",
 	energy_required = 200,
 	enabled = false,
@@ -472,6 +503,7 @@ data:extend(
 	type = "recipe",
     name = "zirconia-chlorination",
 	icon = "__xander-mod__/graphics/recipe/refining/zirconia-chlorination.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -484,6 +516,7 @@ data:extend(
 	type = "recipe",
     name = "zirconium-oxide",
 	icon = "__xander-mod__/graphics/recipe/refining/zirconium-oxide.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 2,
 	enabled = false,
@@ -496,6 +529,7 @@ data:extend(
 	type = "recipe",
     name = "kroll-zirconium",
 	icon = "__xander-mod__/graphics/recipe/refining/kroll-zirconium.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -508,6 +542,7 @@ data:extend(
 	type = "recipe",
     name = "zirconium-remelting",
 	icon = "__xander-mod__/graphics/recipe/refining/zirconium-remelting.png",
+	icon_size = 32,
 	category = "forge",
 	energy_required = 200,
 	enabled = false,
@@ -523,17 +558,18 @@ data:extend(
 	type = "recipe",
     name = "iron-plate-b",
 	category = "basic-refining",
-	energy_required = 16,
+	energy_required = 32,
 	enabled = false,
-	ingredients = {{"iron-ore", 2}, {"limestone", 1}},
+	ingredients = {{"iron-ore", 4}, {"limestone", 1}},
 	result = "iron-plate",
-	result_count = 4
+	result_count = 8
 },
 --Raw Iron
 {
 	type = "recipe",
     name = "raw-iron",
 	icon = "__xander-mod__/graphics/recipe/refining/raw-iron.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 100,
 	enabled = false,
@@ -546,6 +582,7 @@ data:extend(
 	type = "recipe",
     name = "magnetite-vanadium-slagging",
 	icon = "__xander-mod__/graphics/recipe/refining/magnetite-vanadium.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 40,
 	enabled = false,
@@ -558,10 +595,11 @@ data:extend(
 	type = "recipe",
     name = "oil-vanadium-slagging",
 	icon = "__xander-mod__/graphics/recipe/refining/oil-vanadium.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "crude-oil", amount = 50}, {"soda", 2}, {"calcium-oxide", 2}},-- {type = "fluid", name = "oxygen", amount = 300}},
+	ingredients = {{type = "fluid", name = "crude-oil", amount = 50}, {"soda", 2}, {"calcium-oxide", 2}, {type = "fluid", name = "oxygen", amount = 300}},
 	results = {{"vanadium-slag", 2}, {type = "fluid", name = "flue-gas", amount = 300}},
 	subgroup = "raw-material"
 },
@@ -570,6 +608,7 @@ data:extend(
 	type = "recipe",
     name = "iron-vanadium",
 	icon = "__xander-mod__/graphics/recipe/refining/iron-vanadium.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 200,
 	enabled = false,
@@ -582,6 +621,7 @@ data:extend(
 	type = "recipe",
     name = "vanadium-leaching",
 	icon = "__xander-mod__/graphics/recipe/refining/vanadium-leaching.png",
+	icon_size = 32,
 	category = "sluice",
 	crafting_machine_tint =
 	{
@@ -592,7 +632,7 @@ data:extend(
 	energy_required = 20,
 	enabled = false,
 	ingredients = {{"vanadium-slag", 2}, {type = "fluid", name = "ammonia", amount = 20}, {type = "fluid", name = "sulfuric-acid", amount = 10}},
-	results = {{"ammonium-vanadate", 2}, {"sludge", 1}, {type = "fluid", name = "waste-water", amount = 20}},
+	results = {{"ammonium-vanadate", 2}, {type = "fluid", name = "waste-slurry", amount = 20}},
 	subgroup = "raw-material"
 },
 --Ammonium Vanadate Decomposition
@@ -600,6 +640,7 @@ data:extend(
 	type = "recipe",
     name = "vanadate-decomposition",
 	icon = "__xander-mod__/graphics/recipe/refining/vanadate-decomposition.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
@@ -612,6 +653,7 @@ data:extend(
 	type = "recipe",
     name = "vanadium-reduction",
 	icon = "__xander-mod__/graphics/recipe/refining/vanadium-reduction.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
@@ -635,6 +677,7 @@ data:extend(
 	type = "recipe",
     name = "galena-roasting",
 	icon = "__xander-mod__/graphics/recipe/refining/galena-roasting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
@@ -647,6 +690,7 @@ data:extend(
 	type = "recipe",
     name = "lead-smelting",
 	icon = "__xander-mod__/graphics/recipe/refining/lead-smelting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 50,
 	enabled = false,
@@ -659,6 +703,7 @@ data:extend(
 	type = "recipe",
     name = "parkes-process",
 	icon = "__xander-mod__/graphics/recipe/refining/parkes-process.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 100,
 	enabled = false,
@@ -671,6 +716,7 @@ data:extend(
 	type = "recipe",
     name = "silver-electrowinning",
 	icon = "__xander-mod__/graphics/recipe/refining/silver-electrowinning.png",
+	icon_size = 32,
 	category = "electrolysis",
 	crafting_machine_tint =
 	{
@@ -680,8 +726,8 @@ data:extend(
 	},
 	energy_required = 100,
 	enabled = false,
-	ingredients = {{"silver-sponge", 10}, {type = "fluid", name = "nitric-acid", amount = 10}},
-	results = {{"silver-plate", 10}, {"sludge", 1}, {type = "fluid", name = "waste-water", amount = 20}},
+	ingredients = {{"silver-sponge", 10}, {type = "fluid", name = "nitric-acid", amount = 10}, {type = "fluid", name = "water", amount = 20}},
+	results = {{"silver-plate", 10}, {"sludge", 1}, {type = "fluid", name = "gray-water", amount = 20}},
 	subgroup = "raw-material"
 },
 --
@@ -691,6 +737,7 @@ data:extend(
 	type = "recipe",
     name = "boron-oxide",
 	icon = "__xander-mod__/graphics/recipe/refining/boron-oxide.png",
+	icon_size = 32,
 	category = "chemistry",
 	crafting_machine_tint =
 	{
@@ -700,17 +747,18 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"borax", 1}, {type = "fluid", name = "hydrogen-chloride", amount = 20}, {type = "fluid", name = "water", amount = 30}},
-	results = {{"boron-oxide", 10}, {"salt", 1}, {type = "fluid", name = "waste-water", amount = 10}},
+	ingredients = {{"borax", 1}, {type = "fluid", name = "hydrogen-chloride", amount = 20}, {type = "fluid", name = "water", amount = 50}},
+	results = {{"boron-oxide", 10}, {"salt", 1}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-material"
 },
 --
 --NATURAL GAS
---Natural Gas Cold Distillation
+--Natural Gas Cryogenic Distillation
 {
 	type = "recipe",
     name = "gas-distillation",
 	icon = "__xander-mod__/graphics/recipe/refining/gas-distillation.png",
+	icon_size = 32,
 	category = "oil-processing",
 	energy_required = 20,
 	enabled = false,
@@ -719,11 +767,12 @@ data:extend(
 		{type = "fluid", name = "methane", amount = 30}},
 	subgroup = "raw-material"
 },
---Advanced Natural Gas Cold Distillation
+--Advanced Natural Gas Cryogenic Distillation
 {
 	type = "recipe",
     name = "advanced-gas-distillation",
 	icon = "__xander-mod__/graphics/recipe/refining/advanced-gas-distillation.png",
+	icon_size = 32,
 	category = "chemical-plant",
 	energy_required = 40,
 	enabled = false,
@@ -739,6 +788,7 @@ data:extend(
 	type = "recipe",
     name = "limestone-calcining",
 	icon = "__xander-mod__/graphics/recipe/refining/limestone-calcining.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -751,6 +801,7 @@ data:extend(
 	type = "recipe",
     name = "magnesite-calcining",
 	icon = "__xander-mod__/graphics/recipe/refining/magnesite-calcining.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -763,6 +814,7 @@ data:extend(
 	type = "recipe",
     name = "magnesia-dissolution",
 	icon = "__xander-mod__/graphics/recipe/refining/magnesia-dissolution.png",
+	icon_size = 32,
 	category = "chemistry",
 	crafting_machine_tint =
 	{
@@ -782,6 +834,7 @@ data:extend(
 	type = "recipe",
     name = "sphalerite-roasting",
 	icon = "__xander-mod__/graphics/recipe/refining/sphalerite-roasting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
@@ -794,6 +847,7 @@ data:extend(
 	type = "recipe",
     name = "zinc-electrowinning",
 	icon = "__xander-mod__/graphics/recipe/refining/zinc-electrowinning.png",
+	icon_size = 32,
 	category = "electrolysis",
 	crafting_machine_tint =
 	{
@@ -803,8 +857,8 @@ data:extend(
 	},
 	energy_required = 100,
 	enabled = false,
-	ingredients = {{"zinc-oxide", 10}, {type = "fluid", name = "sulfuric-acid", amount = 10}},
-	results = {{"zinc-plate", 10}, {type = "fluid", name = "waste-water", amount = 20}},
+	ingredients = {{"zinc-oxide", 10}, {type = "fluid", name = "sulfuric-acid", amount = 10}, {type = "fluid", name = "water", amount = 20}},
+	results = {{"zinc-plate", 10}, {type = "fluid", name = "gray-water", amount = 20}},
 	subgroup = "raw-material"
 },
 --Chalcopyrite Roasting
@@ -812,6 +866,7 @@ data:extend(
 	type = "recipe",
     name = "chalcopyrite-roasting",
 	icon = "__xander-mod__/graphics/recipe/refining/chalcopyrite-roasting.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 20,
 	enabled = false,
@@ -824,6 +879,7 @@ data:extend(
 	type = "recipe",
     name = "fayalite-cracking",
 	icon = "__xander-mod__/graphics/recipe/refining/fayalite-cracking.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 20,
 	enabled = false,
@@ -838,6 +894,7 @@ data:extend(
 	type = "recipe",
     name = "monazite-conversion",
 	icon = "__xander-mod__/graphics/recipe/refining/monazite-conversion.png",
+	icon_size = 32,
 	category = "chemistry",
 	crafting_machine_tint =
 	{
@@ -848,7 +905,7 @@ data:extend(
 	energy_required = 20,
 	enabled = false,
 	ingredients = {{"monazite", 2}, {type = "fluid", name = "sulfuric-acid", amount = 20}, {type = "fluid", name = "ammonia", amount = 40}},
-	results = {{"re-oxide", 2}, {type = "fluid", name = "phosphoric-acid", amount = 10}, {type = "fluid", name = "waste-water", amount = 40}},
+	results = {{"re-oxide", 2}, {type = "fluid", name = "phosphoric-acid", amount = 10}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-material"
 },
 --Rare Earth Metals Reduction
@@ -856,6 +913,7 @@ data:extend(
 	type = "recipe",
     name = "re-reduction",
 	icon = "__xander-mod__/graphics/recipe/refining/re-reduction.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -868,6 +926,7 @@ data:extend(
 	type = "recipe",
     name = "uranium-hexafluoride",
 	icon = "__xander-mod__/graphics/recipe/refining/uranium-hexafluoride.png",
+	icon_size = 32,
 	category = "chemistry",
 	crafting_machine_tint =
 	{
@@ -878,7 +937,7 @@ data:extend(
 	energy_required = 10,
 	enabled = false,
 	ingredients = {{"uranyl-nitrate", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 60}},
-	results = {{"natural-uf6", 1}, {type = "fluid", name = "nitrogen-dioxide", amount = 10}, {type = "fluid", name = "waste-water", amount = 20}},
+	results = {{"natural-uf6", 1}, {type = "fluid", name = "nitrogen-dioxide", amount = 10}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-material"
 },
 --Base "uranium-processing" placeholder
@@ -887,6 +946,7 @@ data:extend(
 	type = "recipe",
     name = "weapons-enrichment",
 	icon = "__xander-mod__/graphics/recipe/refining/weapons-enrichment.png",
+	icon_size = 32,
 	category = "centrifuging",
 	energy_required = 500,
 	enabled = false,
@@ -900,11 +960,12 @@ data:extend(
 	type = "recipe",
     name = "fuel-hydrolysis",
 	icon = "__xander-mod__/graphics/recipe/refining/fuel-hydrolysis.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"fuel-uf6", 1}, {type = "fluid", name = "water", amount = 20}},-- {type = "fluid", name = "hydrogen", amount = 10}},
-	results = {{"fuel-uo2", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 40}},-- {type = "fluid", name = "waste-water", amount = 20}},
+	ingredients = {{"fuel-uf6", 1}, {type = "fluid", name = "water", amount = 100}, {type = "fluid", name = "hydrogen", amount = 10}},
+	results = {{"fuel-uo2", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 40}, {type = "fluid", name = "gray-water", amount = 100}},
 	subgroup = "raw-material"
 },
 --238-Uranium Hexafluoride Hydrolysis
@@ -912,11 +973,12 @@ data:extend(
 	type = "recipe",
     name = "238-hydrolysis",
 	icon = "__xander-mod__/graphics/recipe/refining/238-hydrolysis.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"238-uf6", 1}, {type = "fluid", name = "water", amount = 20}},-- {type = "fluid", name = "hydrogen", amount = 10}},
-	results = {{"238-uo2", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 40}},-- {type = "fluid", name = "waste-water", amount = 20}},
+	ingredients = {{"238-uf6", 1}, {type = "fluid", name = "water", amount = 100}, {type = "fluid", name = "hydrogen", amount = 10}},
+	results = {{"238-uo2", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 40}, {type = "fluid", name = "gray-water", amount = 100}},
 	subgroup = "raw-material"
 },
 --Weapons-Grade Uranium Hexafluoride Hydrolysis
@@ -924,11 +986,12 @@ data:extend(
 	type = "recipe",
     name = "weapons-hydrolysis",
 	icon = "__xander-mod__/graphics/recipe/refining/weapons-hydrolysis.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"weapons-uf6", 1}, {type = "fluid", name = "water", amount = 20}},-- {type = "fluid", name = "hydrogen", amount = 10}},
-	results = {{"weapons-uo2", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 40}},-- {type = "fluid", name = "waste-water", amount = 20}},
+	ingredients = {{"weapons-uf6", 1}, {type = "fluid", name = "water", amount = 100}, {type = "fluid", name = "hydrogen", amount = 10}},
+	results = {{"weapons-uo2", 1}, {type = "fluid", name = "hydrogen-fluoride", amount = 40}, {type = "fluid", name = "gray-water", amount = 100}},
 	subgroup = "raw-material"
 },
 --238-Uranium Reduction
@@ -936,6 +999,7 @@ data:extend(
 	type = "recipe",
     name = "238-reduction",
 	icon = "__xander-mod__/graphics/recipe/refining/238-reduction.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -948,6 +1012,7 @@ data:extend(
 	type = "recipe",
     name = "weapons-reduction",
 	icon = "__xander-mod__/graphics/recipe/refining/weapons-reduction.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 5,
 	enabled = false,
@@ -962,6 +1027,7 @@ data:extend(
 	type = "recipe",
     name = "magnesium-electrolysis",
 	icon = "__xander-mod__/graphics/recipe/refining/magnesium-electrolysis.png",
+	icon_size = 32,
 	category = "refining",
 	energy_required = 800,
 	enabled = false,
@@ -976,6 +1042,7 @@ data:extend(
 	type = "recipe",
     name = "air-distillation-a",
 	icon = "__xander-mod__/graphics/recipe/refining/air-distillation-a.png",
+	icon_size = 32,
 	category = "oil-processing",
 	energy_required = 10,
 	enabled = false,
@@ -988,6 +1055,7 @@ data:extend(
 	type = "recipe",
     name = "air-distillation-b",
 	icon = "__xander-mod__/graphics/recipe/refining/air-distillation-b.png",
+	icon_size = 32,
 	category = "oil-processing",
 	energy_required = 200,
 	enabled = false,
@@ -1004,7 +1072,7 @@ data:extend(
 	energy_required = 20,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "air", amount = 100}},
-	results = {{type = "fluid", name = "water", amount = 20}}
+	results = {{type = "fluid", name = "distilled-water", amount = 20}}
 },
 --
 --WOOD

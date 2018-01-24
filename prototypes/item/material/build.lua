@@ -14,12 +14,10 @@ data.raw.item["stone-brick"].stack_size = 200
 --Concrete
 data.raw.item["concrete"].order = "05"
 data.raw.item["concrete"].stack_size = 200
-data.raw.item["concrete"].place_as_tile = {result = "concrete", condition_size = 1, condition = {"water-tile"}}
 
 --Hazard Concrete
 data.raw.item["hazard-concrete"].order = "06"
 data.raw.item["hazard-concrete"].stack_size = 200
-data.raw.item["hazard-concrete"].place_as_tile = {result = "concrete", condition_size = 1, condition = {"water-tile"}}
 
 
 data:extend(
@@ -34,6 +32,7 @@ data:extend(
 	type = "item",
 	name = "brick-clay",
 	icon = "__xander-mod__/graphics/item/material/build/brick-clay.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "02",
@@ -41,7 +40,7 @@ data:extend(
 	place_as_tile =
 	{
 		result = "brick",
-		condition_size = 3,
+		condition_size = 1,
 		condition = {"water-tile"}
 	}
 },
@@ -50,6 +49,7 @@ data:extend(
 	type = "item",
 	name = "brick-clay-graphite",
 	icon = "__xander-mod__/graphics/item/material/build/brick-clay-graphite.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "02",
@@ -60,6 +60,7 @@ data:extend(
 	type = "item",
 	name = "glass",
 	icon = "__xander-mod__/graphics/item/material/build/glass.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "03",
@@ -70,6 +71,7 @@ data:extend(
 	type = "item",
 	name = "cement-powder",
 	icon = "__xander-mod__/graphics/item/material/build/cement-powder.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "04",
@@ -84,6 +86,7 @@ data:extend(
 	type = "item",
 	name = "fused-basalt",
 	icon = "__xander-mod__/graphics/item/material/build/fused-basalt.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "07",
@@ -100,6 +103,7 @@ data:extend(
 	type = "item",
 	name = "fused-quartz",
 	icon = "__xander-mod__/graphics/item/material/build/fused-quartz.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "08",
@@ -116,6 +120,7 @@ data:extend(
 	type = "item",
 	name = "brick-spinel",
 	icon = "__xander-mod__/graphics/item/material/build/brick-spinel.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "09",
@@ -126,6 +131,7 @@ data:extend(
 	type = "item",
 	name = "brick-zirconia",
 	icon = "__xander-mod__/graphics/item/material/build/brick-zirconia.png",
+	icon_size = 32,
 	flags = {"goes-to-main-inventory"},
 	subgroup = "terrain",
 	order = "10",

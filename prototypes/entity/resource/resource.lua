@@ -4,7 +4,7 @@
 --Base "coal"
 data.raw.resource["coal"].category = "basic-solid"
 data.raw.resource["coal"].order = "02"
-data.raw.resource["coal"].minable.hardness = 1
+data.raw.resource["coal"].minable.hardness = 0.5
 data.raw.resource["coal"].autoplace.richness_multiplier = 3000
 data.raw.resource["coal"].autoplace.richness_multiplier_distance_bonus = 60
 data.raw.resource["coal"].stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10}
@@ -45,7 +45,7 @@ data.raw.resource["crude-oil"].order = "04"
 data.raw.resource["iron-ore"].icon = "__xander-mod__/graphics/item/material/resource/iron.png"
 data.raw.resource["iron-ore"].category = "basic-solid"
 data.raw.resource["iron-ore"].order = "08"
-data.raw.resource["iron-ore"].minable.hardness = 1
+data.raw.resource["iron-ore"].minable.hardness = 0.5
 data.raw.resource["iron-ore"].stage_counts = {10000, 5000, 2000, 1000, 500, 200, 100, 10}
 data.raw.resource["iron-ore"].stages =
 {
@@ -94,12 +94,13 @@ data:extend(
 	type = "resource",
 	name = "apatite",
 	icon = "__xander-mod__/graphics/item/material/resource/apatite.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "tough-solid",
+    category = "hard-solid",
 	order = "00",
 	minable =
 	{
-		hardness = 2.5,
+		hardness = 1.5,
 		mining_time = 2,
 		result = "apatite"--,
 		--fluid_amount = 10,
@@ -154,6 +155,7 @@ data:extend(
 	type = "resource",
 	name = "bauxite",
 	icon = "__xander-mod__/graphics/item/material/resource/bauxite.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
     category = "basic-solid",
 	order = "01",
@@ -221,12 +223,13 @@ data:extend(
 	type = "resource",
 	name = "garnierite",
 	icon = "__xander-mod__/graphics/item/material/resource/garnierite.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
     category = "hard-solid",
 	order = "05",
 	minable =
 	{
-		hardness = 2.4,
+		hardness = 1.5,
 		mining_time = 2,
 		result = "garnierite"--,
 		--fluid_amount = 10,
@@ -281,6 +284,7 @@ data:extend(
 	type = "resource",
 	name = "granitic",
 	icon = "__xander-mod__/graphics/item/material/resource/granitic.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
     category = "basic-solid",
 	order = "06",
@@ -342,12 +346,13 @@ data:extend(
 	type = "resource",
 	name = "heavy-sand",
 	icon = "__xander-mod__/graphics/item/material/resource/heavy.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
-    category = "hard-solid",
+    category = "tough-solid",
 	order = "07",
 	minable =
 	{
-		hardness = 2.4,
+		hardness = 2.5,
 		mining_time = 2,
 		result = "heavy-sand",
 		fluid_amount = 1,
@@ -404,12 +409,13 @@ data:extend(
 	type = "resource",
 	name = "lead-ore",
 	icon = "__xander-mod__/graphics/item/material/resource/lead.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
     category = "basic-solid",
 	order = "09",
 	minable =
 	{
-		hardness = 1,
+		hardness = 0.5,
 		mining_particle = "lead-particle",
 		mining_time = 2,
 		result = "lead-ore"
@@ -465,6 +471,7 @@ data:extend(
 	type = "resource",
 	name = "mineral-water",
 	icon = "__xander-mod__/graphics/fluid/aqueous/mineral-water.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
 	category = "basic-fluid",
 	order = "10",
@@ -532,6 +539,7 @@ data:extend(
 	type = "resource",
 	name = "natural-gas",
 	icon = "__xander-mod__/graphics/fluid/hydrocarbon/natural-gas.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
 	category = "basic-fluid",
 	order = "11",
@@ -601,12 +609,13 @@ data:extend(
 	type = "resource",
 	name = "sulfidic-ore",
 	icon = "__xander-mod__/graphics/item/material/resource/sulfidic.png",
+	icon_size = 32,
 	flags = {"placeable-neutral"},
     category = "hard-solid",
 	order = "14",
 	minable =
 	{
-		hardness = 2.4,
+		hardness = 1.5,
 		mining_time = 2,
 		result = "sulfidic-ore"--,
 		--fluid_amount = 20,

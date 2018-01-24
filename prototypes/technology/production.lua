@@ -4,7 +4,7 @@
 --Base "advanced-material-processing"
 data.raw.technology["advanced-material-processing"].effects = {{type = "unlock-recipe", recipe = "brick-clay-graphite-a"}, 
 	{type = "unlock-recipe", recipe = "steel-furnace"}, {type = "unlock-recipe", recipe = "iron-plate-b"}, 
-	{type = "unlock-recipe", recipe = "copper-plate-b"}}
+	{type = "unlock-recipe", recipe = "forging-iron-b"}, {type = "unlock-recipe", recipe = "copper-plate-b"}}
 data.raw.technology["advanced-material-processing"].prerequisites = {"plumbing-steel"}
 data.raw.technology["advanced-material-processing"].unit = {count = 20, ingredients = {{"science-pack-1", 1}, {"science-pack-2", 1}}, time = 30}
 data.raw.technology["advanced-material-processing"].order = "07-08"
@@ -473,6 +473,10 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "wood-resin"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "waste-water-clarifying-a"
 		}
 	},
 	prerequisites = {"glass-a", "smelting-sulfur"},
@@ -498,6 +502,10 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "reactor-1"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "distilled-water"
 		}
 	},
 	prerequisites = {"machines_1", "reactor_0", "pump_1"},
