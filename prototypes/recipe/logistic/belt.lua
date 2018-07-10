@@ -3,7 +3,7 @@
 
 
 --Base "transport-belt"
-data.raw.recipe["transport-belt"].category = "basic-crafting"
+data.raw.recipe["transport-belt"].category = "crafting"
 data.raw.recipe["transport-belt"].energy_required = 1
 data.raw.recipe["transport-belt"].enabled = false
 data.raw.recipe["transport-belt"].ingredients = {{"steel-plate", 2}, {"shaft-1", 1}}
@@ -34,7 +34,7 @@ data.raw.recipe["express-transport-belt"].expensive =
 
 
 --Base "underground-belt"
-data.raw.recipe["underground-belt"].category = "basic-crafting"
+data.raw.recipe["underground-belt"].category = "crafting"
 data.raw.recipe["underground-belt"].energy_required = 1
 data.raw.recipe["underground-belt"].ingredients = {{"transport-belt", 6}, {"brick-clay", 12}, {"forging-steel", 2}}
 
@@ -51,7 +51,7 @@ data.raw.recipe["express-underground-belt"].ingredients = {{"expedited-undergrou
 
 
 --Base "splitter"
-data.raw.recipe["splitter"].category = "basic-crafting"
+data.raw.recipe["splitter"].category = "crafting"
 data.raw.recipe["splitter"].energy_required = 1
 data.raw.recipe["splitter"].ingredients = {{"transport-belt", 4}, {"mechanism-1", 1}, {"steel-plate", 4}}
 
@@ -94,7 +94,7 @@ data:extend(
     name = "slow-transport-belt",
 	category = "basic-crafting",
 	energy_required = 1,
-	ingredients = {{"shaft-0", 1}, {"iron-plate", 2}, {"bronze-plate", 2}},
+	ingredients = {{"shaft-0", 2}, {"iron-plate", 3}, {"bronze-plate", 1}},
 	result = "slow-transport-belt",
 	result_count = 4
 },

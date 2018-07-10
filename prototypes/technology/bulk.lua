@@ -1,4 +1,3 @@
-
 --Base Overrides
 
 --Base "steel-processing"
@@ -451,7 +450,7 @@ data:extend(
 	{
 		{
 			type = "unlock-recipe",
-			recipe = "brick-clay-a"
+			recipe = "brick-clay-b"
 		}
 	},
 	prerequisites = {"advanced-material-processing-2", "bauxite-sediment"},
@@ -908,7 +907,7 @@ data:extend(
 			recipe = "graphite-powder"
 		}
 	},
-	prerequisites = {"furnace_4", "coke-a", "smelting-graphite"},
+	prerequisites = {"furnace_4", "coke-a", "graphite-washing"},
 	unit =
 	{
 		count = 250,

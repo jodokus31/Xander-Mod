@@ -2,37 +2,37 @@ local xmutil = require("xmutil")
 
 --Base Overrides
 
---[[Base "stone-furnace"
-data.raw.furnace["stone-furnace"].crafting_categories = {"empty"}
+--Base "stone-furnace"
+data.raw.furnace["stone-furnace"].flags = {"player-creation"}
 
 --Base "steel-furnace"
-data.raw.furnace["steel-furnace"].crafting_categories = {"empty"}
+data.raw.furnace["steel-furnace"].flags = {"player-creation"}
 
 --Base "electric-furnace"
-data.raw.furnace["electric-furnace"].crafting_categories = {"empty"}
-]]--
+data.raw.furnace["electric-furnace"].flags = {"player-creation"}
+
 
 data:extend(
 {
 
---Base "stone-furnace" placeholder
---Assembler-Type Stone Furnace (replaces base "stone-furnace")
+--Base "stone-furnace" placeholder - entity disabled via no item to place it
+--Assembler-Type Stone Furnace - replaces base "stone-furnace"
 xmutil.clone("furnace", "stone-furnace",
 	{
 		{
 			"__base__/graphics/entity/stone-furnace/stone-furnace.png",
-			"__xander-mod__/graphics/entity/production/furnace-1/1.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-1/1.png",
 		},
 		{
 			"__base__/graphics/entity/stone-furnace/hr-stone-furnace.png",
-			"__xander-mod__/graphics/entity/production/furnace-1/hr-1.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-1/hr-1.png",
 		},
 	},
 	{
 		type = "assembling-machine",
 		name = "furnace-1",
-		icon = "__xander-mod__/graphics/item/production/furnace/furnace-1.png",
-		minable = {mining_time = 1, result = "furnace-1"},
+		icon = "__xander-mod__/graphics/item/production/smelting-machine/furnace-1.png",
+		minable = {mining_time = 1, result = "stone-furnace"},
 		max_health = 50,
 		crafting_categories = {"kiln"},
 		crafting_speed = 0.5,
@@ -46,17 +46,17 @@ xmutil.clone("furnace", "stone-furnace",
 	{
 		{
 			"__base__/graphics/entity/stone-furnace/stone-furnace.png",
-			"__xander-mod__/graphics/entity/production/furnace-2/2.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-2/2.png",
 		},
 		{
 			"__base__/graphics/entity/stone-furnace/hr-stone-furnace.png",
-			"__xander-mod__/graphics/entity/production/furnace-2/hr-2.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-2/hr-2.png",
 		},
 	},
 	{
 		type = "assembling-machine",
 		name = "furnace-2",
-		icon = "__xander-mod__/graphics/item/production/furnace/furnace-2.png",
+		icon = "__xander-mod__/graphics/item/production/smelting-machine/furnace-2.png",
 		minable = {mining_time = 1, result = "furnace-2"},
 		max_health = 100,
 		crafting_categories = {"kiln", "smelting"},
@@ -65,15 +65,15 @@ xmutil.clone("furnace", "stone-furnace",
 		ingredient_count = 4
 	}
 ),
---Base "steel-furnace" placeholder
---Assembler-Type Blast Furnace
+--Base "steel-furnace" placeholder - disabled via no item to place it
+--Assembler-Type Blast Furnace - replaces base "steel-furnace"
 xmutil.clone("furnace", "steel-furnace",
 	{},
 	{
 		type = "assembling-machine",
 		name = "furnace-3",
 		icon = "__base__/graphics/icons/steel-furnace.png",
-		minable = {mining_time = 1, result = "furnace-3"},
+		minable = {mining_time = 1, result = "steel-furnace"},
 		max_health = 200,
 		crafting_categories = {"kiln", "smelting", "basic-refining"},
 		crafting_speed = 2,
@@ -87,20 +87,20 @@ xmutil.clone("furnace", "electric-furnace",
 	{
 		{
 			"__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
-			"__xander-mod__/graphics/entity/production/furnace-4/4.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-4/4.png",
 		},
 		{
 			"__base__/graphics/entity/electric-furnace/hr-electric-furnace-base.png",
-			"__xander-mod__/graphics/entity/production/furnace-4/hr-4.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-4/hr-4.png",
 		},
 	},
 	{
 		type = "assembling-machine",
 		name = "furnace-4",
-		icon = "__xander-mod__/graphics/item/production/furnace/furnace-4.png",
+		icon = "__xander-mod__/graphics/item/production/smelting-machine/furnace-4.png",
 		minable = {mining_time = 1, result = "furnace-4"},
 		max_health = 500,
-		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
+		--fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
 		crafting_categories = {"refining"},
 		crafting_speed = 2,
 		energy_source = { emissions = 0.002 },
@@ -108,8 +108,8 @@ xmutil.clone("furnace", "electric-furnace",
 		ingredient_count = 6,
 	}
 ),
---Base "electric-furnace" (DISABLED via NO RECIPE FOR THE ITEM TO PLACE IT) placeholder
---Electric Foundry-Forge - more capable entity taking the place of the base "electric-furnace"
+--Base "electric-furnace" placeholder - disabled via no item to place it
+--Electric Foundry-Forge - replaces base "electric-furnace"
 xmutil.clone("furnace", "electric-furnace",
 	{
 	},
@@ -117,9 +117,9 @@ xmutil.clone("furnace", "electric-furnace",
 		type = "assembling-machine",
 		name = "furnace-5",
 		icon = "__base__/graphics/icons/electric-furnace.png",
-		minable = {mining_time = 1, result = "furnace-5"},
+		minable = {mining_time = 1, result = "electric-furnace"},
 		max_health = 500,
-		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-4"),
+		--fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
 		crafting_categories = {"forge"},
 		crafting_speed = 2,
 			energy_source = { emissions = 0.002 },
@@ -132,24 +132,24 @@ xmutil.clone("furnace", "electric-furnace",
 	{
 		{
 			"__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
-			"__xander-mod__/graphics/entity/production/furnace-6/6.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-6/6.png",
 		},
 		{
 			"__base__/graphics/entity/electric-furnace/hr-electric-furnace-base.png",
-			"__xander-mod__/graphics/entity/production/furnace-6/hr-6.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-6/hr-6.png",
 		},
 		{
 			"__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-			"__xander-mod__/graphics/entity/production/furnace-6/heater.png",
+			"__xander-mod-graphics-0__/graphics/entity/production/furnace-6/heater.png",
 		},
 	},
 	{
 		type = "assembling-machine",
 		name = "furnace-6",
-		icon = "__xander-mod__/graphics/item/production/furnace/furnace-6.png",
+		icon = "__xander-mod__/graphics/item/production/smelting-machine/furnace-6.png",
 		minable = {mining_time = 1, result = "furnace-6"},
 		max_health = 1000,
-		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-4"),
+		--fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
 		crafting_categories = {"refining", "forge"},
 		crafting_speed = 4,
 		energy_source = { emissions = 0.0008 },
