@@ -1,4 +1,3 @@
-
 --Base Overrides
 
 --Base "science-pack-1"
@@ -36,7 +35,8 @@ data:extend(
 	category = "basic-crafting",
 	energy_required = 2,
 	ingredients = {{"blank-1", 1}, {"copper-cable", 2}},
-	result = "science-pack-0"
+	result = "science-pack-0",
+	result_count = 2
 }
 
 })

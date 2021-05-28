@@ -1,4 +1,3 @@
-
 --Base Overrides
 
 --Base "burner-inserter"
@@ -42,16 +41,6 @@ data.raw.recipe["stack-filter-inserter"].ingredients = {{"stack-inserter", 1}, {
 data:extend(
 {
 
---Chemical-Fuel Burner Inserter
-{
-	type = "recipe",
-    name = "inserter-chemical-burner",
-	category = "basic-crafting",
-	energy_required = 1,
-	ingredients = {{"iron-plate", 4}, {"forging-iron", 1}, {"blank-1", 2}},
-	result = "inserter-chemical-burner",
-	result_count = 2
-},
 --Slow Electric Inserter (Iron-Based)
 {
 	type = "recipe",
@@ -209,7 +198,7 @@ data:extend(
 	category = "machine",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"monel-plate", 1}},
+	ingredients = {{"monel-billet", 1}},
 	result = "pipe-monel"
 },
 --Stainless Steel Pipe

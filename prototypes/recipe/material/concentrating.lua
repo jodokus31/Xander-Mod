@@ -1,9 +1,8 @@
-
 data:extend(
 {
 
 --
---APATITE
+--PHOSPHORITE
 --Transferred
 --Fluorite Flotation
 {
@@ -20,7 +19,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"apatite", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"phosphorite", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"fluorite", 10}, {"gravel", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -40,75 +39,12 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"apatite", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
-	results = {{"phosphate-rock", 10}, {"gravel", 2}, {type = "fluid", name = "waste-water", amount = 50}},
+	ingredients = {{"phosphorite", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	results = {{"hydroxylapatite", 10}, {"gravel", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
 --
---BAUXITE
---Transferred
---[[
---Crude Clay Finding (sorting through dirt by hand)
-{
-	type = "recipe",
-    name = "hand-clay",
-	category = "basic-sluice",
-	energy_required = 1,
-	ingredients = {{"bauxite", 2}},
-	result = "clay"
-},
-]]--
---Transferred
---Bauxite Clay
-{
-	type = "recipe",
-    name = "bauxite-clay",
-	icon = "__xander-mod__/graphics/recipe/raw/bauxite-clay.png",
-	icon_size = 32,
-	category = "sluice",
-	crafting_machine_tint =
-	{
-		primary = {r = 0.000, g = 0.110, b = 0.588},
-		secondary = {r = 0.564, g = 0.795, b = 0.000},
-		tertiary = {r = 0.678, g = 0.565, b = 0.478}
-	},
-	energy_required = 20,
-	enabled = false,
-	ingredients = {{"bauxite", 10}, {type = "fluid", name = "water", amount = 50}},
-	results = {{"clay", 10}, {type = "fluid", name = "gray-water", amount = 50}},
-	subgroup = "raw-resource"
-},
---To be removed
---Hand Sand Sorting
-{
-	type = "recipe",
-    name = "hand-sand",
-	category = "basic-sluice",
-	energy_required = 1,
-	enabled = false,
-	ingredients = {{"bauxite", 2}},
-	result = "sand"
-},
---Transferred (to quartz-sand, in milled-resources)
---Bauxite Sand
-{
-	type = "recipe",
-    name = "bauxite-sand",
-	icon = "__xander-mod__/graphics/recipe/raw/bauxite-sand.png",
-	icon_size = 32,
-	category = "sluice",
-	crafting_machine_tint =
-	{
-		primary = {r = 0.000, g = 0.110, b = 0.588},
-		secondary = {r = 0.564, g = 0.795, b = 0.000},
-		tertiary = {r = 0.678, g = 0.565, b = 0.478}
-	},
-	energy_required = 20,
-	enabled = false,
-	ingredients = {{"bauxite", 10}, {type = "fluid", name = "water", amount = 50}},
-	results = {{"sand", 10}, {"gravel", 1}, {type = "fluid", name = "gray-water", amount = 50}},
-	subgroup = "raw-resource"
-},
+--LATERITE
 --Hand Garnierite Sorting
 {
 	type = "recipe",
@@ -116,8 +52,8 @@ data:extend(
 	category = "basic-sluice",
 	enabled = false,
 	energy_required = 10,
-	ingredients = {{"bauxite", 5}},
-	result = "garnierite"
+	ingredients = {{"laterite", 5}},
+	result = "magnetic"
 },
 --Bayer Process
 {
@@ -134,7 +70,7 @@ data:extend(
 	},
 	energy_required = 60,
 	enabled = false,
-	ingredients = {{"bauxite", 10}, {type = "fluid", name = "water", amount = 80}, {"sodium-hydroxide", 10}},
+	ingredients = {{"laterite", 10}, {type = "fluid", name = "water", amount = 80}, {"sodium-hydroxide", 10}},
 	results = {{"aluminum-hydroxide", 20}, {type = "fluid", name = "waste-slurry", amount = 80}},
 	subgroup = "raw-resource"
 },
@@ -180,7 +116,7 @@ data:extend(
 	subgroup = "raw-resource"
 },
 --
---GARNIERITE
+--MAGNETIC
 --Transferred
 --Nickel Oxide
 {
@@ -197,7 +133,7 @@ data:extend(
 	},
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"garnierite", 10}, {type = "fluid", name = "water", amount = 50}},
+	ingredients = {{"magnetic", 10}, {type = "fluid", name = "water", amount = 50}},
 	results = {{"nickel-oxide", 10}, {"gravel", 2}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -216,12 +152,12 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"garnierite", 20}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"magnetic", 20}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"platinum-sponge", 1}, {"gravel", 4}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
 --
---GRANITIC ORE
+--SKARN
 --Transferred
 --Cassiterite Washing
 {
@@ -238,7 +174,7 @@ data:extend(
 	},
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"granitic-ore", 10}, {type = "fluid", name = "water", amount = 50}},
+	ingredients = {{"skarn", 10}, {type = "fluid", name = "water", amount = 50}},
 	results = {{"cassiterite", 10}, {"sand", 2}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -258,7 +194,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"granitic-ore", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"skarn", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"scheelite", 2}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -277,7 +213,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"granitic-ore", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"skarn", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"gold-sponge", 1}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -290,12 +226,12 @@ data:extend(
 	category = "ore-plant",
 	energy_required = 60,
 	enabled = false,
-	ingredients = {{"granitic-ore", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 2}},
+	ingredients = {{"skarn", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 2}},
 	results = {{"cassiterite", 10}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}, {"scheelite", 2}},
 	subgroup = "raw-resource"
 },
 --
---HEAVY SAND
+--SAND
 --Transferred
 --Chromite Flotation
 {
@@ -312,7 +248,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"heavy-sand", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"sand", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"chromite", 10}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -332,8 +268,8 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"heavy-sand", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
-	results = {{"rutile", 10}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
+	ingredients = {{"sand", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	results = {{"ilmenite", 10}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
 --Transferred
@@ -352,8 +288,8 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"heavy-sand", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
-	results = {{"zirconia", 2}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
+	ingredients = {{"sand", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	results = {{"zircon", 2}, {"sand", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
 --
@@ -395,11 +331,11 @@ data:extend(
 	energy_required = 20,
 	enabled = false,
 	ingredients = {{"iron-ore", 10}},
-	results = {{"vanadium-magnetite", 10}, {"gravel", 2}},
+	results = {{"magnetite", 10}, {"gravel", 2}},
 	subgroup = "raw-resource"
 },
 --
---LEAD ORE
+--MASSIVE SULFIDE
 --Galena Washing
 {
 	type = "recipe",
@@ -415,7 +351,7 @@ data:extend(
 	},
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"lead-ore", 10}, {type = "fluid", name = "water", amount = 50}},
+	ingredients = {{"massive-sulfide", 10}, {type = "fluid", name = "water", amount = 50}},
 	results = {{"galena", 10}, {"gravel", 2}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -434,7 +370,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"lead-ore", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"massive-sulfide", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"silver-sponge", 1}, {"gravel", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -447,7 +383,7 @@ data:extend(
 	category = "basic-sluice",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"stone", 2}, {"coal", 2}},
+	ingredients = {{"evaporites", 2}},
 	result = "saltpeter"
 },
 --Transferred
@@ -466,7 +402,7 @@ data:extend(
 	},
 	energy_required = 4,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "mineral-water", amount = 100}, {"soda", 1}},
+	ingredients = {{"evaporites", 10}, {"sodium-carbonate", 1}},
 	results = {{"saltpeter", 5}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -480,7 +416,7 @@ data:extend(
 	category = "refining",
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "mineral-water", amount = 200}},
+	ingredients = {{"evaporites", 20}},
 	results = {{"borax", 1}, {type = "fluid", name = "distilled-water", amount = 200}},
 	subgroup = "raw-resource"
 },
@@ -537,25 +473,7 @@ data:extend(
 	results = {{"limestone", 20}, {"gravel", 2}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-resource"
 },
---Magnesite Washing
-{
-	type = "recipe",
-    name = "magnesite-washing",
-	icon = "__xander-mod__/graphics/recipe/raw/magnesite-washing.png",
-	icon_size = 32,
-	category = "sluice",
-	crafting_machine_tint =
-	{
-		primary = {r = 0.000, g = 0.110, b = 0.588},
-		secondary = {r = 0.564, g = 0.795, b = 0.000},
-		tertiary = {r = 0.678, g = 0.565, b = 0.478}
-	},
-	energy_required = 20,
-	enabled = false,
-	ingredients = {{"stone", 10}, {type = "fluid", name = "water", amount = 50}},
-	results = {{"magnesite", 10}, {"gravel", 2}, {type = "fluid", name = "gray-water", amount = 50}},
-	subgroup = "raw-resource"
-},
+--Transferred
 --Gravel Crushing
 {
 	type = "recipe",
@@ -573,7 +491,7 @@ data:extend(
 	result = "gravel"
 },
 --
---SULFIDIC ORE
+--IGNEOUS SULFIDE
 --Transferred
 --Chalcopyrite Washing
 {
@@ -590,7 +508,7 @@ data:extend(
 	},
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"sulfidic-ore", 10}, {type = "fluid", name = "water", amount = 50}},
+	ingredients = {{"igneous-sulfide", 10}, {type = "fluid", name = "water", amount = 50}},
 	results = {{"chalcopyrite", 10}, {"gravel", 2}, {type = "fluid", name = "gray-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -610,7 +528,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"sulfidic-ore", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
+	ingredients = {{"igneous-sulfide", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 1}},
 	results = {{"sphalerite", 5}, {"gravel", 2}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "raw-resource"
 },
@@ -623,7 +541,7 @@ data:extend(
 	category = "ore-plant",
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"sulfidic-ore", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 2}},
+	ingredients = {{"igneous-sulfide", 10}, {type = "fluid", name = "water", amount = 50}, {"surfactant", 2}},
 	results = {{"chalcopyrite", 10}, {"gravel", 2}, {type = "fluid", name = "waste-water", amount = 50}, {"sphalerite", 5}},
 	subgroup = "raw-resource"
 },
@@ -678,7 +596,7 @@ data:extend(
 	energy_required = 4,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "water", amount = 50}},
-	result = "salt"
+	result = "sodium-chloride"
 },
 --Improved Salt Evaporation
 {
@@ -690,7 +608,7 @@ data:extend(
 	energy_required = 2,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "water", amount = 50}},
-	results = {{"salt", 1}, {type = "fluid", name = "distilled-water", amount = 50}},
+	results = {{"sodium-chloride", 1}, {type = "fluid", name = "distilled-water", amount = 50}},
 	subgroup = "raw-resource"
 },
 --Magnesia Precipitation
@@ -709,7 +627,7 @@ data:extend(
 	energy_required = 5,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "water", amount = 100}, {"sodium-hydroxide", 2}},
-	results = {{"magnesium-oxide", 1}, {"salt", 2}, {type = "fluid", name = "gray-water", amount = 20}},
+	results = {{"magnesium-oxide", 1}, {"sodium-chloride", 2}, {type = "fluid", name = "gray-water", amount = 20}},
 	subgroup = "raw-resource"
 },
 --

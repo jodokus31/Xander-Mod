@@ -1,12 +1,11 @@
-
 --Base Overrides
 
 --Base "electronic-circuit"
 data.raw.recipe["electronic-circuit"].category = "basic-crafting"
 data.raw.recipe["electronic-circuit"].normal = {energy_required = 2, enabled = false, ingredients = {{"metallized-1", 2}, {"components-1", 2}, 
-	{"bronze-plate", 2}, {"solder-1-plate", 1}}, result = "electronic-circuit", result_count = 2}
+	{"bronze-plate", 2}, {"solder-1-ingot", 1}}, result = "electronic-circuit", result_count = 2}
 data.raw.recipe["electronic-circuit"].expensive = {energy_required = 2, enabled = false, ingredients = {{"metallized-1", 2}, {"components-1", 4}, 
-	{"bronze-plate", 2}, {"solder-1-plate", 2}}, result = "electronic-circuit", result_count = 2}
+	{"bronze-plate", 2}, {"solder-1-ingot", 2}}, result = "electronic-circuit", result_count = 2}
 
 --Base "advanced-circuit"
 data.raw.recipe["advanced-circuit"].normal = {energy_required = 5, enabled = false, ingredients = {{"etched-2", 1}, {"components-2", 1}, {"wire-solder-1", 2}, 
@@ -17,9 +16,9 @@ data.raw.recipe["advanced-circuit"].expensive = {energy_required = 5, enabled = 
 --Base "processing-unit"
 data.raw.recipe["processing-unit"].category = "advanced-crafting"
 data.raw.recipe["processing-unit"].normal = {energy_required = 10, enabled = false, ingredients = {{"etched-3", 1}, {"wire-solder-2", 2}, 
-	{"components-3", 1}, {"aluminum-plate", 2}, {"plastic-bar", 2}}, result = "processing-unit"}
+	{"components-3", 1}, {"aluminum-ingot", 2}, {"plastic-bar", 2}}, result = "processing-unit"}
 data.raw.recipe["processing-unit"].expensive = {energy_required = 10, enabled = false, ingredients = {{"etched-3", 1}, {"wire-solder-2", 4}, 
-	{"components-3", 4}, {"aluminum-plate", 4}, {"plastic-bar", 4}}, result = "processing-unit"}
+	{"components-3", 4}, {"aluminum-ingot", 4}, {"plastic-bar", 4}}, result = "processing-unit"}
 
 
 data:extend(
@@ -47,7 +46,7 @@ data:extend(
 	category = "crafting-with-fluid",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"fiber-glass", 1}, {"sheet-tinned", 2}, {type = "fluid", name = "uncured-resol", amount = 10}},
+	ingredients = {{"glass-fiber", 1}, {"sheet-tinned", 2}, {type = "fluid", name = "uncured-resol", amount = 10}},
 	result = "metallized-2"
 },
 --Metallized Board 3
@@ -57,7 +56,7 @@ data:extend(
 	category = "crafting-with-fluid",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"fiber-glass", 1}, {"sheet-gilded", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}},
+	ingredients = {{"glass-fiber", 1}, {"sheet-gilded", 1}, {type = "fluid", name = "uncured-epoxy", amount = 10}},
 	result = "metallized-3"
 },
 --
@@ -125,7 +124,7 @@ data:extend(
 	category = "basic-machine",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"copper-cable", 2}, {"tin-plate", 1}},
+	ingredients = {{"copper-cable", 2}, {"tin-ingot", 1}},
 	result = "wire-tinned",
 	result_count = 8
 },
@@ -136,7 +135,7 @@ data:extend(
 	category = "machine",
 	energy_required = 4,
 	enabled = false,
-	ingredients = {{"tungsten-block", 1}},
+	ingredients = {{"tungsten-ingot", 1}},
 	result = "wire-tungsten",
 	result_count = 4
 },
@@ -147,7 +146,7 @@ data:extend(
 	category = "machine",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"gold-plate", 1}},
+	ingredients = {{"gold-ingot", 1}},
 	result = "wire-gold",
 	result_count = 4
 },
@@ -158,7 +157,7 @@ data:extend(
 	category = "basic-machine",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"solder-1-plate", 2}, {"solder-flux", 1}},
+	ingredients = {{"solder-1-ingot", 2}, {"solder-flux", 1}},
 	result = "wire-solder-1",
 	result_count = 8
 },
@@ -169,7 +168,7 @@ data:extend(
 	category = "machine",
 	energy_required = 4,
 	enabled = false,
-	ingredients = {{"solder-2-plate", 2}, {"solder-flux", 1}},
+	ingredients = {{"solder-2-ingot", 2}, {"solder-flux", 1}},
 	result = "wire-solder-2",
 	result_count = 8
 },
@@ -204,7 +203,7 @@ data:extend(
 	category = "machine",
 	energy_required = 4,
 	enabled = false,
-	ingredients = {{"nickel-plate", 2}, {"tungsten-block", 1}, {"glass", 1}, {"wire-copper", 4}},
+	ingredients = {{"nickel-ingot", 2}, {"tungsten-ingot", 1}, {"glass", 1}, {"wire-copper", 4}},
 	result = "components-2"
 },
 --Electron Valve Components B
@@ -214,7 +213,7 @@ data:extend(
 	category = "machine",
 	energy_required = 4,
 	enabled = false,
-	ingredients = {{"monel-plate", 1}, {"wire-tungsten", 1}, {"wafer-2", 1}, {"plastic-bar", 1}, {"wire-tinned", 2}},
+	ingredients = {{"monel-billet", 1}, {"wire-tungsten", 1}, {"wafer-2", 1}, {"plastic-bar", 1}, {"wire-tinned", 2}},
 	result = "components-2"
 },
 --Digital Electronic Components
@@ -274,44 +273,6 @@ data:extend(
 	ingredients = {{"wafer-2", 2}, {"wire-tinned", 2}},
 	result = "wafer-solar"
 },
---[[
---
---PRIMARY DATA PARTS
---Solenoid Relay
-{
-	type = "recipe",
-    name = "data-1",
-	category = "crafting",
-	energy_required = 5,
-	enabled = false,
-	ingredients = {{"wire-tinned", 2}, {"wire-copper", 8}, {"rod-2", 1}, {"bronze-plate", 1}},
-	result = "data-1",
-	result_count = 2
-},
---Integrated Transistor Package
-{
-	type = "recipe",
-    name = "data-2",
-	category = "crafting-with-fluid",
-	energy_required = 10,
-	enabled = false,
-	ingredients = {{"wire-tinned", 2}, {"wafer-2", 2}, {type = "fluid", name = "uncured-resol", amount = 10}, {"chromium-plate", 1}, 
-		{"silver-plate", 1}},
-	result = "data-2",
-	result_count = 2
-},
---Central Processing Unit
-{
-	type = "recipe",
-    name = "data-3",
-	category = "crafting-with-fluid",
-	energy_required = 20,
-	enabled = false,
-	ingredients = {{"wire-gold", 4}, {"wafer-3", 2}, {type = "fluid", name = "uncured-epoxy", amount = 10}, {"tungsten-block", 1}, {"platinum-plate", 1}},
-	result = "data-3",
-	result_count = 2
-},
-]]--
 
 
 --

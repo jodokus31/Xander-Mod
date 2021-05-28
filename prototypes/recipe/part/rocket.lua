@@ -1,9 +1,8 @@
-
 --Base Overrides
 
 --Base "uranium-fuel-cell"
 data.raw.recipe["uranium-fuel-cell"].category = "advanced-crafting"
-data.raw.recipe["uranium-fuel-cell"].ingredients = {{"fuel-pellet", 2}, {"forging-zirconium", 4}, {"boron-oxide", 2}, {"silver-plate", 4}, 
+data.raw.recipe["uranium-fuel-cell"].ingredients = {{"fuel-pellet", 2}, {"forging-zirconium", 4}, {"boron-oxide", 2}, {"silver-ingot", 4}, 
 	{"graphite-block", 1}}
 data.raw.recipe["uranium-fuel-cell"].result_count = 2
 
@@ -11,20 +10,20 @@ data.raw.recipe["uranium-fuel-cell"].result_count = 2
 data.raw.recipe["nuclear-fuel-reprocessing"].category = "chemical-plant"
 data.raw.recipe["nuclear-fuel-reprocessing"].energy_required = 20
 data.raw.recipe["nuclear-fuel-reprocessing"].ingredients = {{"used-up-uranium-fuel-cell", 1}, {type = "fluid", name = "nitric-acid", amount = 40}, 
-	{"zinc-plate", 1}}
-data.raw.recipe["nuclear-fuel-reprocessing"].results = {{"238-uo2", 1}, {"zirconium-sponge", 6}, {type = "fluid", name = "waste-water", amount = 40}, 
+	{"zinc-ingot", 1}}
+data.raw.recipe["nuclear-fuel-reprocessing"].results = {{"uranium-238-oxide", 1}, {"zirconium-sponge", 6}, {type = "fluid", name = "waste-water", amount = 40}, 
 	{"silver-sponge", 1}}
 
 --Base "rocket-fuel"
 data.raw.recipe["rocket-fuel"].energy_required = 50
 data.raw.recipe["rocket-fuel"].category = "chemical-plant"
 data.raw.recipe["rocket-fuel"].ingredients = {{"solid-fuel", 20}, {type = "fluid", name = "hydrogen", amount = 100}, 
-	{type = "fluid", name = "oxygen", amount = 500}, {type = "fluid", name = "ammonia", amount = 50}, {"aluminum-plate", 8}, {"lithium-perchlorate", 3}}
+	{type = "fluid", name = "oxygen", amount = 500}, {type = "fluid", name = "ammonia", amount = 50}, {"aluminum-ingot", 8}, {"lithium-perchlorate", 3}}
 
 --Base "low-density-structure"
 data.raw.recipe["low-density-structure"].energy_required = 50
 data.raw.recipe["low-density-structure"].category = "advanced-machine"
-data.raw.recipe["low-density-structure"].ingredients = {{"forging-stainless", 5}, {"forging-alloy", 5}, {"forging-titanium", 5}, {"fiber-carbon", 20}, 
+data.raw.recipe["low-density-structure"].ingredients = {{"forging-stainless", 5}, {"forging-alloy", 5}, {"forging-titanium", 5}, {"carbon-fiber", 20}, 
 	{type = "fluid", name = "uncured-epoxy", amount = 100}, {"forging-aluminum", 10}, {"pipe-superalloy", 10}}
 
 --Base "rocket-control-unit"
@@ -57,7 +56,7 @@ data:extend(
 	category = "advanced-machine",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"fuel-uo2", 2}},
+	ingredients = {{"uranium-fuel-oxide", 2}},
 	result = "fuel-pellet"
 },
 --Base "uranium-fuel-cell" placeholder
@@ -74,8 +73,8 @@ data:extend(
 	category = "forge",
 	energy_required = 50,
 	enabled = false,
-	ingredients = {{"forging-superalloy", 5}, {"brick-zirconia", 10}, {"nitride-block", 5}, {"tungsten-block", 10}, {"forging-zirconium", 5}, 
-		{"graphite-block", 5}, {"fiber-glass", 20}},
+	ingredients = {{"forging-superalloy", 5}, {"brick-zirconia", 10}, {"nitride-block", 5}, {"tungsten-ingot", 10}, {"forging-zirconium", 5}, 
+		{"graphite-block", 5}, {"glass-fiber", 20}},
 	result = "rocket-thermal"
 },
 --Rocket Mechanism

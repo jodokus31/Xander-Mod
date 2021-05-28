@@ -1,4 +1,3 @@
-
 data:extend(
 {
 
@@ -53,19 +52,6 @@ data:extend(
 	energy_required = 24,
 	enabled = false,
 	ingredients = {{"burner-inserter", 2}, {"limestone", 3}},
-	results = {{"iron-plate", 12}},
-	subgroup = "raw-material"
-},
---Chemical Burner Inserter
-{
-	type = "recipe",
-	name = "recycle-inserter-chemical-burner",
-	icon = "__xander-mod__/graphics/recipe/waste/recycle-inserter-chemical-burner.png",
-	icon_size = 32,
-	category = "smelting",
-	energy_required = 24,
-	enabled = false,
-	ingredients = {{"inserter-chemical-burner", 2}, {"limestone", 3}},
 	results = {{"iron-plate", 12}},
 	subgroup = "raw-material"
 },
@@ -127,7 +113,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "waste-water", amount = 200}, {"soda", 1}},
+	ingredients = {{type = "fluid", name = "waste-water", amount = 200}, {"sodium-carbonate", 1}},
 	results = {{type = "fluid", name = "water", amount = 200}, {"sludge", 4}},
 	subgroup = "waste"
 },
@@ -146,7 +132,7 @@ data:extend(
 	},
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "waste-slurry", amount = 200}, {"soda", 2}, {"magnesium-chloride", 1}},
+	ingredients = {{type = "fluid", name = "waste-slurry", amount = 200}, {"sodium-carbonate", 2}, {"magnesium-chloride", 1}},
 	results = {{type = "fluid", name = "water", amount = 200}, {"sludge", 10}},
 	subgroup = "waste"
 },
@@ -276,22 +262,6 @@ data:extend(
 	enabled = false,
 	ingredients = {{"sulfur", 1}, {"gravel", 2}},
 	result = "gravel"
-},
---Magnesite Burial
-{
-	type = "recipe",
-    name = "magnesite-burial",
-	category = "sluice",
-	crafting_machine_tint =
-	{
-		primary = {r = 0.000, g = 0.110, b = 0.588},
-		secondary = {r = 0.564, g = 0.795, b = 0.000},
-		tertiary = {r = 0.678, g = 0.565, b = 0.478}
-	},
-	energy_required = 1,
-	enabled = false,
-	ingredients = {{"magnesite", 2}},
-	result = "magnesite"
 },
 --Limestone Burial
 {
@@ -436,8 +406,8 @@ data:extend(
 	},
 	energy_required = 1,
 	enabled = false,
-	ingredients = {{"salt", 2}, {type = "fluid", name = "water", amount = 10}},
-	result = "salt"
+	ingredients = {{"sodium-chloride", 2}, {type = "fluid", name = "water", amount = 10}},
+	result = "sodium-chloride"
 }
 
 })

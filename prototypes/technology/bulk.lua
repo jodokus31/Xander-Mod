@@ -2,7 +2,7 @@
 
 --Base "steel-processing"
 data.raw.technology["steel-processing"].effects = {{type = "unlock-recipe", recipe = "steel-plate"}, {type = "unlock-recipe", recipe = "forging-steel-a"}, 
-	{type = "unlock-recipe", recipe = "blank-3-a"}, {type = "unlock-recipe", recipe = "steel-chest"}}
+	{type = "unlock-recipe", recipe = "blank-3-a"}, {type = "unlock-recipe", recipe = "steel-axe"}}
 data.raw.technology["steel-processing"].prerequisites = {"coke-a"}
 data.raw.technology["steel-processing"].unit.count = 20
 data.raw.technology["steel-processing"].unit.ingredients = {{"science-pack-0", 1}}
@@ -30,6 +30,73 @@ data.raw.technology["sulfur-processing"].unit.count = 200
 data.raw.technology["sulfur-processing"].order = "02-33"
 
 
+--Move in from "part"
+data:extend(
+{
+--Carbon Fiber
+{
+	type = "technology",
+	name = "fiber-carbon",
+	icon = "__xander-mod__/graphics/technology/part/fiber-carbon.png",
+	icon_size = 128,
+	effects =
+	{
+		{
+			type = "unlock-recipe",
+			recipe = "fiber-carbon"
+		}
+	},
+	prerequisites = {"plastics", "advanced-material-processing-2", "carbon-processing"},
+	unit =
+	{
+		count = 400,
+		ingredients =
+		{
+			{"science-pack-1", 1},
+			{"science-pack-2", 1},
+			{"science-pack-3", 1},
+			{"production-science-pack", 1},
+			{"high-tech-science-pack", 1}
+		},
+		time = 45
+	},
+	order = "04-04"
+},
+--Tungsten Carbide Cermet with Cobalt
+{
+	type = "technology",
+	name = "tungsten-cermet",
+	icon = "__xander-mod__/graphics/technology/part/tungsten-cermet.png",
+	icon_size = 128,
+	effects =
+	{
+		{
+			type = "unlock-recipe",
+			recipe = "tungsten-carbide"
+		},
+		{
+			type = "unlock-recipe",
+			recipe = "tungsten-cermet"
+		}
+	},
+	prerequisites = {"tungsten-refining", "acheson-process", "cobalt-refining"},
+	unit =
+	{
+		count = 400,
+		ingredients =
+		{
+			{"science-pack-1", 1},
+			{"science-pack-2", 1},
+			{"science-pack-3", 1}
+		},
+		time = 45
+	},
+	order = "04-05"
+}
+
+})
+
+--Main bulk material techs
 data:extend(
 {
 
@@ -43,7 +110,7 @@ data:extend(
 	{
 		{
 			type = "unlock-recipe",
-			recipe = "forging-iron-b"
+			recipe = "forging-iron-c"
 		},
 		{
 			type = "unlock-recipe",
@@ -1389,10 +1456,6 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "recycle-burner-inserter"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "recycle-inserter-chemical-burner"
 		}
 	},
 	prerequisites = {"advanced-material-processing"},
@@ -1431,10 +1494,6 @@ data:extend(
 		{
 			type = "unlock-recipe",
 			recipe = "calcium-sulfate-burial"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "magnesite-burial"
 		},
 		{
 			type = "unlock-recipe",

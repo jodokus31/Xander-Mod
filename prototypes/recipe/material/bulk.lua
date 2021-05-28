@@ -105,7 +105,7 @@ data:extend(
 	category = "smelting",
 	energy_required = 4,
 	enabled = false,
-	ingredients = {{"lead-ore", 2}, {"coal", 1}},
+	ingredients = {{"massive-sulfide", 2}, {"coal", 1}},
 	result = "sulfur"
 },
 --Phosphor Bronze - Direct Alloy Recipe
@@ -115,7 +115,7 @@ data:extend(
 	category = "forge",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"copper-plate", 8}, {"tin-plate", 2}, {"phosphorus", 1}},
+	ingredients = {{"copper-plate", 8}, {"tin-ingot", 2}, {"phosphorus", 1}},
 	result = "bronze-plate",
 	result_count = 10
 },
@@ -127,8 +127,8 @@ data:extend(
 	category = "smelting",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"tin-plate", 3}, {"lead-plate", 2}},
-	result = "solder-1-plate",
+	ingredients = {{"tin-ingot", 3}, {"lead-ingot", 2}},
+	result = "solder-1-ingot",
 	result_count = 5
 },
 --Tin-Lead Solder Plate - Direct Alloy Recipe
@@ -138,8 +138,8 @@ data:extend(
 	category = "forge",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"tin-plate", 3}, {"lead-plate", 2}},
-	result = "solder-1-plate",
+	ingredients = {{"tin-ingot", 3}, {"lead-ingot", 2}},
+	result = "solder-1-ingot",
 	result_count = 5
 },
 --Transferred
@@ -150,8 +150,8 @@ data:extend(
 	category = "forge",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"tin-plate", 7}, {"copper-plate", 2}, {"silver-plate", 1}},
-	result = "solder-2-plate",
+	ingredients = {{"tin-ingot", 7}, {"copper-plate", 2}, {"silver-ingot", 1}},
+	result = "solder-2-ingot",
 	result_count = 10
 },
 --Crude Monel Plate
@@ -161,8 +161,8 @@ data:extend(
 	category = "smelting",
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"nickel-plate", 3}, {"copper-plate", 2}},
-	result = "monel-plate",
+	ingredients = {{"nickel-ingot", 3}, {"copper-plate", 2}},
+	result = "monel-billet",
 	result_count = 5
 },
 --Proper Monel Metal Alloy
@@ -172,8 +172,8 @@ data:extend(
 	category = "forge",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"nickel-plate", 3}, {"copper-plate", 2}},
-	result = "monel-plate",
+	ingredients = {{"nickel-ingot", 3}, {"copper-plate", 2}},
+	result = "monel-billet",
 	result_count = 5
 },
 --Leaded Brass
@@ -183,8 +183,8 @@ data:extend(
 	category = "forge",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"copper-plate", 6}, {"zinc-plate", 4}, {"lead-plate", 1}},
-	result = "brass-plate",
+	ingredients = {{"copper-plate", 6}, {"zinc-ingot", 4}, {"lead-ingot", 1}},
+	result = "brass-billet",
 	result_count = 10
 },
 --Silicon Boule A
@@ -196,7 +196,7 @@ data:extend(
 	category = "forge",
 	energy_required = 100,
 	enabled = false,
-	ingredients = {{"metallurgical-plate", 16}, {"phosphorus", 1}},
+	ingredients = {{"silicon-ingot", 16}, {"phosphorus", 1}},
 	result = "silicon-boule",
 	icon_size = 32,
 	result_count = 2
@@ -210,7 +210,7 @@ data:extend(
 	category = "forge",
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"ultrapure-powder", 8}, {"phosphorus", 2}, {type = "fluid", name = "nitrogen", amount = 20}},
+	ingredients = {{"semiconductor-silicon-powder", 8}, {"phosphorus", 2}, {type = "fluid", name = "nitrogen", amount = 20}},
 	result = "silicon-boule",
 	icon_size = 32,
 	result_count = 2
@@ -219,7 +219,7 @@ data:extend(
 --
 --BUILDING MATERIALS
 --Base "stone-brick" placeholder
---[[
+--Transferred
 --Crude Clay Brick
 {
 	type = "recipe",
@@ -229,7 +229,6 @@ data:extend(
 	ingredients = {{"clay", 1}},
 	result = "brick-clay"
 },
-]]--
 --Transferred
 --Improved Clay Brick
 {
@@ -296,7 +295,7 @@ data:extend(
 	category = "refining",
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"calcium-oxide", 5}, {"sand", 1}, {"bauxite", 1}},
+	ingredients = {{"calcium-oxide", 5}, {"sand", 1}, {"laterite", 1}},
 	result = "cement-powder",
 	result_count = 5
 },
@@ -308,7 +307,7 @@ data:extend(
 	category = "refining",
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"calcium-oxide", 2}, {"slag", 1}, {"bauxite", 1}},
+	ingredients = {{"calcium-oxide", 2}, {"slag", 1}, {"laterite", 1}},
 	result = "cement-powder",
 	result_count = 5
 },
@@ -368,7 +367,7 @@ data:extend(
 	category = "smelting",
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"sand", 10}, {"soda", 1}, {"limestone", 1}, {"saltpeter", 1}},
+	ingredients = {{"sand", 10}, {"sodium-carbonate", 1}, {"limestone", 1}, {"saltpeter", 1}},
 	result = "glass",
 	result_count = 10
 },
@@ -445,7 +444,7 @@ data:extend(
 	category = "basic-chemistry",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"salt", 2}, {type = "fluid", name = "sulfuric-acid", amount = 10}},
+	ingredients = {{"sodium-chloride", 2}, {type = "fluid", name = "sulfuric-acid", amount = 10}},
 	results = {{"sodium-sulfate", 1}, {type = "fluid", name = "hydrogen-chloride", amount = 20}},
 	subgroup = "salt",
 	crafting_machine_tint =
@@ -484,7 +483,7 @@ data:extend(
 	energy_required = 4,
 	enabled = false,
 	ingredients = {{"limestone", 1}, {"sodium-sulfate", 1}},
-	results = {{"soda", 1}},
+	results = {{"sodium-carbonate", 1}},
 	subgroup = "salt",
 	crafting_machine_tint =
 	{
@@ -502,8 +501,8 @@ data:extend(
 	category = "chemistry",
 	energy_required = 40,
 	enabled = false,
-	ingredients = {{"limestone", 20}, {"salt", 40}, {type = "fluid", name = "distilled-water", amount = 10}, {type = "fluid", name = "ammonia", amount = 10}},
-	results = {{"soda", 20}, {"calcium-chloride", 20}, {type = "fluid", name = "waste-water", amount = 50}},
+	ingredients = {{"limestone", 20}, {"sodium-chloride", 40}, {type = "fluid", name = "distilled-water", amount = 10}, {type = "fluid", name = "ammonia", amount = 10}},
+	results = {{"sodium-carbonate", 20}, {"calcium-chloride", 20}, {type = "fluid", name = "waste-water", amount = 50}},
 	subgroup = "salt",
 	crafting_machine_tint =
 	{
@@ -521,7 +520,7 @@ data:extend(
 	category = "chemistry",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"soda", 1}, {"calcium-oxide", 1}, {type = "fluid", name = "distilled-water", amount = 10}},
+	ingredients = {{"sodium-carbonate", 1}, {"calcium-oxide", 1}, {type = "fluid", name = "distilled-water", amount = 10}},
 	results = {{"sodium-hydroxide", 2}, {"limestone", 1}, {type = "fluid", name = "gray-water", amount = 10}},
 	subgroup = "salt",
 	crafting_machine_tint =
@@ -551,7 +550,7 @@ data:extend(
 	category = "refining",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"metallurgical-powder", 3}, {type = "fluid", name = "nitrogen", amount = 20}},
+	ingredients = {{"silicon-powder", 3}, {type = "fluid", name = "nitrogen", amount = 20}},
 	result = "silicon-nitride",
 	icon_size = 32,
 	result_count = 10
@@ -604,7 +603,7 @@ data:extend(
 	energy_required = 10,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "chlorine", amount = 30}, {type = "fluid", name = "water", amount = 10}, {"lithium-hydroxide", 6}, {"sodium-hydroxide", 5}},
-	results = {{"lithium-perchlorate", 1}, {"salt", 5}, {"lithium-hydroxide", 5}, {type = "fluid", name = "waste-water", amount = 50}, {type = "fluid", name = "hydrogen", amount = 10}},
+	results = {{"lithium-perchlorate", 1}, {"sodium-chloride", 5}, {"lithium-hydroxide", 5}, {type = "fluid", name = "waste-water", amount = 50}, {type = "fluid", name = "hydrogen", amount = 10}},
 	subgroup = "salt",
 	crafting_machine_tint =
 	{
@@ -994,7 +993,7 @@ data:extend(
 	category = "basic-chemistry",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"raw-wood", 4}, {type = "fluid", name = "water", amount = 20}, {"granitic-ore", 1}, {"iron-ore", 1}},
+	ingredients = {{"raw-wood", 4}, {type = "fluid", name = "water", amount = 20}, {"skarn", 1}, {"iron-ore", 1}},
 	results = {{type = "fluid", name = "formic-acid", amount = 20}},
 	subgroup = "carbohydrate",
 	crafting_machine_tint =
@@ -1390,7 +1389,7 @@ data:extend(
 	energy_required = 20,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "propylene", amount = 10}, {type = "fluid", name = "chlorine", amount = 20}, {"sodium-hydroxide", 1}},
-	results = {{type = "fluid", name = "epichlorohydrin", amount = 10}, {type = "fluid", name = "hydrogen-chloride", amount = 10}, {"salt", 1}},
+	results = {{type = "fluid", name = "epichlorohydrin", amount = 10}, {type = "fluid", name = "hydrogen-chloride", amount = 10}, {"sodium-chloride", 1}},
 	subgroup = "other-organic",
 	crafting_machine_tint =
 	{
@@ -1523,7 +1522,7 @@ data:extend(
 	energy_required = 50,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "water", amount = 100}, {"sodium-hydroxide", 2}},
-	results = {{type = "fluid", name = "hydrogen", amount = 100}, {type = "fluid", name = "oxygen", amount = 50}, {"soda", 1}},
+	results = {{type = "fluid", name = "hydrogen", amount = 100}, {type = "fluid", name = "oxygen", amount = 50}, {"sodium-carbonate", 1}},
 	subgroup = "nonmetal",
 	crafting_machine_tint =
 	{
@@ -1541,7 +1540,7 @@ data:extend(
 	category = "electrolysis",
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{type = "fluid", name = "water", amount = 20}, {"salt", 2}},
+	ingredients = {{type = "fluid", name = "water", amount = 20}, {"sodium-chloride", 2}},
 	results = {{type = "fluid", name = "hydrogen", amount = 10}, {"sodium-hydroxide", 2}, {type = "fluid", name = "chlorine", amount = 10}},
 	subgroup = "nonmetal",
 	crafting_machine_tint =
@@ -1605,8 +1604,8 @@ data:extend(
 	category = "machine",
 	energy_required = 1,
 	enabled = false,
-	ingredients = {{"metallurgical-plate", 1}},
-	result = "metallurgical-powder"
+	ingredients = {{"silicon-ingot", 1}},
+	result = "silicon-powder"
 },
 --Transferred
 --Activated Carbon Powder
@@ -1635,7 +1634,7 @@ data:extend(
 	energy_required = 10,
 	enabled = false,
 	ingredients = {{type = "fluid", name = "silane", amount = 10}},
-	results = {{"ultrapure-powder", 1}, {type = "fluid", name = "hydrogen", amount = 20}},
+	results = {{"semiconductor-silicon-powder", 1}, {type = "fluid", name = "hydrogen", amount = 20}},
 	subgroup = "nonmetal"
 },
 
@@ -1767,7 +1766,7 @@ data:extend(
 	category = "refining",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"metallurgical-powder", 1}, {type = "fluid", name = "chlorine", amount = 20}},
+	ingredients = {{"silicon-powder", 1}, {type = "fluid", name = "chlorine", amount = 20}},
 	results = {{type = "fluid", name = "silicon-tetrachloride", amount = 10}},
 	icon_size = 32,
 	subgroup = "compound"

@@ -1,4 +1,3 @@
-
 --Base Overrides
 
 --Base "firearm-magazine"
@@ -63,7 +62,7 @@ data.raw.recipe["explosive-rocket"].ingredients = {{"rocket", 1}, {"explosives",
 --Base "atomic-bomb"
 data.raw.recipe["atomic-bomb"].category = "advanced-crafting"
 data.raw.recipe["atomic-bomb"].energy_required = 50
-data.raw.recipe["atomic-bomb"].ingredients = {{"uranium-235", 30}, {"explosives", 50}, {"forging-alloy", 20}, {"tungsten-block", 5}, {"mechanism-3", 5}, 
+data.raw.recipe["atomic-bomb"].ingredients = {{"uranium-235", 30}, {"explosives", 50}, {"forging-alloy", 20}, {"tungsten-ingot", 5}, {"mechanism-3", 5}, 
 	{"control-3", 5}, {"battery-3", 5}, {"rocket", 10}}
 
 --Base "flamethrower-ammo"
@@ -105,7 +104,7 @@ data:extend(
 	category = "smelting",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"lead-plate", 2}},
+	ingredients = {{"lead-ingot", 2}},
 	result = "bullet-1"
 },
 --Piercing Bullets
@@ -115,7 +114,7 @@ data:extend(
 	category = "forge",
 	energy_required = 5,
 	enabled = false,
-	ingredients = {{"lead-plate", 8}, {"copper-plate", 4}, {"forging-steel", 1}},
+	ingredients = {{"lead-ingot", 8}, {"copper-plate", 4}, {"forging-steel", 1}},
 	result = "bullet-2"
 },
 --Uranium Bullets
@@ -125,7 +124,7 @@ data:extend(
 	category = "advanced-machine",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"uranium-238", 2}, {"monel-plate", 10}, {"forging-steel", 2}},
+	ingredients = {{"uranium-238", 2}, {"monel-billet", 10}, {"forging-steel", 2}},
 	result = "bullet-3"
 },
 --Bronze Sheel Casing
@@ -145,7 +144,7 @@ data:extend(
 	category = "machine",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"brass-plate", 4}},
+	ingredients = {{"brass-billet", 4}},
 	result = "casing-2"
 }
 

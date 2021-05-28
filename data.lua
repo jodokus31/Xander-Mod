@@ -35,20 +35,7 @@ require("prototypes.entity.resource.resource")
 --==========  Bulk  ==========
 
 --Items
-require("prototypes.item.material.resource")
-require("prototypes.item.material.milled-resource")
-require("prototypes.item.material.concentrate")
-require("prototypes.item.material.oxide")
-require("prototypes.item.material.sponge")
-require("prototypes.item.material.plate")
-require("prototypes.item.material.ingot")
-require("prototypes.item.material.metal")
-require("prototypes.item.material.alloy")
-require("prototypes.item.material.nonmetal")
-require("prototypes.item.material.organic")
-require("prototypes.item.material.raw")
-require("prototypes.item.material.salt")
-require("prototypes.item.material.build")
+require("prototypes.item.material.material")
 
 --Fluids
 require("prototypes.fluid.element")
@@ -60,13 +47,9 @@ require("prototypes.fluid.hydrocarbon")
 require("prototypes.fluid.other-organic")
 
 --Recipes
+require("prototypes.recipe.material")
 require("prototypes.recipe.material.bulk")
-require("prototypes.recipe.material.milled-resource")
-require("prototypes.recipe.material.concentrate")
 require("prototypes.recipe.material.concentrating")
-require("prototypes.recipe.material.plate")
-require("prototypes.recipe.material.ingot")
-require("prototypes.recipe.material.build")
 require("prototypes.recipe.material.raw-refining")
 require("prototypes.recipe.material.waste")
 
@@ -97,17 +80,20 @@ require("prototypes.item.part.science")
 require("prototypes.item.part.structure")
 
 --Recipes
-require("prototypes.recipe.part.assembly")
+require("prototypes.recipe.part")
+--require("prototypes.recipe.part.assembly")
 require("prototypes.recipe.part.data")
 require("prototypes.recipe.part.electromagnetic")
-require("prototypes.recipe.part.mechanical")
+--require("prototypes.recipe.part.mechanical")
 require("prototypes.recipe.part.structure")
 require("prototypes.recipe.part.rocket")
 require("prototypes.recipe.part.science")
 
 --Technologies
-require("prototypes.technology.data")
-require("prototypes.technology.part")
+require("prototypes.technology.part.mechanical")
+require("prototypes.technology.part.electromagnetic")
+require("prototypes.technology.part.data")
+require("prototypes.technology.part.rocket")
 
 
 --==========  Production  ==========
@@ -122,13 +108,12 @@ require("prototypes.item.production.production")
 require("prototypes.item.production.tool")
 
 --Recipes
+require("prototypes.recipe.production")
 require("prototypes.recipe.production.energy")
 require("prototypes.recipe.production.miner")
-require("prototypes.recipe.production.furnace")
 require("prototypes.recipe.production.chemical")
 require("prototypes.recipe.production.production")
 require("prototypes.recipe.production.module")
-require("prototypes.recipe.production.tool")
 
 --Entities
 require("prototypes.entity.production.energy")

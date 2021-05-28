@@ -1,4 +1,3 @@
-
 --Base Overrides
 
 --Base "boiler"
@@ -18,21 +17,20 @@ data.raw.recipe["steam-engine"].normal = {energy_required = 2, enabled = false, 
 data.raw.recipe["steam-engine"].expensive = {energy_required = 2, enabled = false, ingredients = {{"mechanical-steam-engine", 6}, {"forging-iron", 5}, 
 	{"electric-engine-unit", 4}}, result = "steam-engine"}
 
---Base "steam-turbine"
+--Base "steam-turbine" (medium-temperature)
 data.raw.recipe["steam-turbine"].category = "crafting"
 data.raw.recipe["steam-turbine"].energy_required = 10
-data.raw.recipe["steam-turbine"].ingredients = {{"forging-superalloy", 10}, {"forging-alloy", 20}, {"mechanism-2", 10}, {"mechanism-3", 5}, 
-	{"control-3", 2}, {"motor-3", 4}, {"pipe-superalloy", 20}, {"fused-basalt", 50}}
-
+data.raw.recipe["steam-turbine"].ingredients = {{"forging-alloy", 10}, {"forging-iron", 20}, {"mechanism-2", 10}, {"control-2", 2}, {"motor-2", 4}, {"pipe-stainless", 20}
+}
 --Base "heat-pipe"
 data.raw.recipe["heat-pipe"].category = "crafting"
 data.raw.recipe["heat-pipe"].energy_required = 1
-data.raw.recipe["heat-pipe"].ingredients = {{"forging-stainless", 10}, {"silver-plate", 20}, {"fiber-glass", 20}}
+data.raw.recipe["heat-pipe"].ingredients = {{"forging-stainless", 10}, {"silver-ingot", 20}, {"glass-fiber", 20}}
 
 --Base "nuclear-reactor"
 data.raw.recipe["nuclear-reactor"].category = "crafting"
 data.raw.recipe["nuclear-reactor"].energy_required = 20
-data.raw.recipe["nuclear-reactor"].ingredients = {{"concrete", 2000}, {"lead-plate", 1000}, {"forging-alloy", 500}, {"control-2", 200}, 
+data.raw.recipe["nuclear-reactor"].ingredients = {{"concrete", 2000}, {"lead-ingot", 1000}, {"forging-alloy", 500}, {"control-2", 200}, 
 	{"heat-pipe", 20}, {"forging-zirconium", 200}, {"mechanism-2", 100}}
 
 --Base "solar-panel"
@@ -48,7 +46,7 @@ data.raw.recipe["accumulator"].ingredients = {{"battery-1", 1}, {"forging-steel"
 --Base "small-lamp"
 data.raw.recipe["small-lamp"].category = "crafting"
 data.raw.recipe["small-lamp"].energy_required = 1
-data.raw.recipe["small-lamp"].ingredients = {{"graphite-block", 2}, {"glass", 8}, {"mechanism-1", 1}, {"transformer-1", 1}, {"electronic-circuit", 1}}
+data.raw.recipe["small-lamp"].ingredients = {{"graphite-block", 2}, {"glass", 8}, {"mechanism-1", 1}, {"electronic-circuit", 1}}
 data.raw.recipe["small-lamp"].result_count = 4
 
 
@@ -92,8 +90,17 @@ data:extend(
 	category = "crafting",
 	energy_required = 10,
 	enabled = false,
-	ingredients = {{"forging-alloy", 10}, {"forging-iron", 20}, {"mechanism-2", 10}, {"control-2", 2}, {"motor-2", 4}, {"pipe-stainless", 20}},
-	result = "steam-turbine-2"
+	ingredients = {
+		{"forging-superalloy", 10},
+		{"forging-alloy", 20},
+		{"mechanism-2", 10},
+		{"mechanism-3", 5},
+		{"control-3", 2},
+		{"motor-3", 4},
+		{"pipe-superalloy", 20},
+		{"fused-basalt", 50},
+	},
+	result = "steam-turbine-2",
 },
 --
 --HEAT PIPE, NUCLEAR
@@ -119,7 +126,7 @@ data:extend(
 	category = "crafting",
 	energy_required = 20,
 	enabled = false,
-	ingredients = {{"solar-panel-2", 1}, {"wafer-solar", 32}, {"forging-stainless", 8}, {"silver-plate", 16}, {"fused-quartz", 8}, {"processing-unit", 4}},
+	ingredients = {{"solar-panel-2", 1}, {"wafer-solar", 32}, {"forging-stainless", 8}, {"silver-ingot", 16}, {"fused-quartz", 8}, {"processing-unit", 4}},
 	result = "solar-panel-3"
 },
 --Base "accumulator" placeholder
@@ -141,7 +148,7 @@ data:extend(
 	category = "crafting",
 	energy_required = 2,
 	enabled = false,
-	ingredients = {{"tungsten-block", 2}, {"fused-quartz", 4}, {"electronic-circuit", 2}, {"transformer-2", 1}, {"advanced-circuit", 1}},
+	ingredients = {{"tungsten-ingot", 2}, {"fused-quartz", 4}, {"electronic-circuit", 2}, {"transformer-2", 1}, {"advanced-circuit", 1}},
 	result = "lamp-2"
 },
 --Filament-Based Small Lamp
@@ -151,7 +158,7 @@ data:extend(
 	category = "crafting",
 	energy_required = 1,
 	enabled = false,
-	ingredients = {{"tungsten-block", 1}, {"glass", 4}, {"brass-plate", 2}, {"forging-iron", 2}, {"electronic-circuit", 1}},
+	ingredients = {{"tungsten-ingot", 1}, {"glass", 4}, {"brass-billet", 2}, {"forging-iron", 2}, {"electronic-circuit", 1}},
 	result = "small-lamp"
 }
 

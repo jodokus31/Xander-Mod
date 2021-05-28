@@ -140,11 +140,7 @@ data:extend(
 	{
 		{
 			type = "unlock-recipe",
-			recipe = "bauxite-clay"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "bauxite-sand"
+			recipe = "clay-a"
 		}
 	},
 	prerequisites = {"ore-processor_1"},
@@ -207,7 +203,7 @@ data:extend(
 	{
 		{
 			type = "unlock-recipe",
-			recipe = "hand-sand"
+			recipe = "quartz-sand-a"
 		},
 		{
 			type = "unlock-recipe",
@@ -1168,14 +1164,6 @@ data:extend(
 	icon_size = 128,
 	effects =
 	{
-		{
-			type = "unlock-recipe",
-			recipe = "magnesite-washing"
-		},
-		{
-			type = "unlock-recipe",
-			recipe = "magnesite-calcining"
-		},
 		{
 			type = "unlock-recipe",
 			recipe = "magnesia-dissolution"

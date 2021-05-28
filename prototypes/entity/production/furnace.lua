@@ -4,12 +4,15 @@ local xmutil = require("xmutil")
 
 --Base "stone-furnace"
 data.raw.furnace["stone-furnace"].flags = {"player-creation"}
+data.raw.furnace["stone-furnace"].crafting_categories = {"empty"}
 
 --Base "steel-furnace"
 data.raw.furnace["steel-furnace"].flags = {"player-creation"}
+data.raw.furnace["steel-furnace"].crafting_categories = {"empty"}
 
 --Base "electric-furnace"
 data.raw.furnace["electric-furnace"].flags = {"player-creation"}
+data.raw.furnace["electric-furnace"].crafting_categories = {"empty"}
 
 
 data:extend(
@@ -100,7 +103,7 @@ xmutil.clone("furnace", "electric-furnace",
 		icon = "__xander-mod__/graphics/item/production/smelting-machine/furnace-4.png",
 		minable = {mining_time = 1, result = "furnace-4"},
 		max_health = 500,
-		--fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
+		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
 		crafting_categories = {"refining"},
 		crafting_speed = 2,
 		energy_source = { emissions = 0.002 },
@@ -119,7 +122,7 @@ xmutil.clone("furnace", "electric-furnace",
 		icon = "__base__/graphics/icons/electric-furnace.png",
 		minable = {mining_time = 1, result = "electric-furnace"},
 		max_health = 500,
-		--fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
+		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
 		crafting_categories = {"forge"},
 		crafting_speed = 2,
 			energy_source = { emissions = 0.002 },
@@ -149,7 +152,7 @@ xmutil.clone("furnace", "electric-furnace",
 		icon = "__xander-mod__/graphics/item/production/smelting-machine/furnace-6.png",
 		minable = {mining_time = 1, result = "furnace-6"},
 		max_health = 1000,
-		--fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
+		fluid_boxes = xmutil.assembler_fluid_boxes("assembling-machine-3"),
 		crafting_categories = {"refining", "forge"},
 		crafting_speed = 4,
 		energy_source = { emissions = 0.0008 },
